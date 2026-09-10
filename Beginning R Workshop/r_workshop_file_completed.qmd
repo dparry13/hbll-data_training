@@ -1,0 +1,306 @@
+---
+title: "R Workshop"
+author: "BYU Library"
+format: pdf
+editor: visual
+---
+
+# Basics of R
+
+## What is R?
+
+R is essentially a glorified calculator, but with some more complex abilities. In R (and many other programming languages), there are different **data types**. For our purposes, we will focus on three general types. We have *numbers*, *characters*, and *variables.*
+
+```{r}
+# Numbers:
+6
+20.5
+13 + 30
+
+# Characters:
+"apple"
+"Brigham Young University"
+
+# Variables
+my_variable = 6
+example_name = "apple"
+
+```
+
+In R, we use **functions** to manipulate and analyze data. Functions are commands that always use parentheses:
+
+```{r}
+# prints out the code in quotes
+print("Hello world")
+
+# takes the square root of the number
+sqrt(36)
+```
+
+## Key Concepts
+
+While there are many ways to use R, we will focus on using it as a tool to analyze data. But before being able to analyze the salary table, we must understand a few core concepts:
+
+We use the **assignment operator** ( `=` or `<-` ) to store information in variables. It basically means "gets saved as". We use these operators to save data into R that we will analyze later.
+
+```{r}
+# "The number 5 gets saved as the variable x"
+x = 5
+
+# "The data from the file gets saved as my_table"
+my_table = read.csv("https://drive.google.com/uc?export=download&id=1dwNb9n2pVXtO5NPAH3BPO-a0as9glkpD")
+
+```
+
+The assignment operator `=` is different from the **comparison operator** `==` , which is used to compare two things. It will either return `TRUE` or `FALSE` .
+
+```{r}
+5 == 5
+"pool" == "beach"
+
+```
+
+A **data frame** is R's word for a table or spreadsheet. In a data frame, each row is an observation, and each column is a variable.
+
+```{r}
+# this lets us view the table we just saved
+head(my_table)
+
+```
+
+**Libraries,** or **packages**, are extra "toolboxes" full of different functions that other people have made. To use them, we first have to load them. In this workshop, we will be using the `dplyr` library. This is the primary library for manipulating and analyzing data frames!
+
+```{r}
+# this downloads and saves the dplyr functions to your computer
+install.packages("dplyr")
+
+# this loads the library into our current environment
+library(dplyr)
+
+```
+
+# Salary Data Frame Analysis
+
+## Setup and Initialization
+
+We need to run these three lines before doing any of the analysis:
+
+-   load the `dplyr` library
+
+-   read the csv file of the salary data frame
+
+-   view the table to make sure it loaded correctly
+
+```{r}
+# COMPLETED CODE BELOW:
+
+library(dplyr)
+salary_df <- read.csv("r_workshop_salary_df.csv")
+head(salary_df) # remember: you can also use names() or View() to get info abt the data frame!
+
+
+# (hint -- use library(), read.csv(), and head() functions!)
+```
+
+## Analyzing the Data
+
+During this workshop, we will learn four key functions found in the `dplyr` library:
+
+-   `select()`
+
+-   `filter()`
+
+-   `mutate()`
+
+-   `summarize()`
+
+The **select** function is used to only keep the columns that we are interested in. For example, if we only want to look at the salaries of different jobs and the currency they are paid in, we may do the following:
+
+```{r}
+salary_df %>%
+  select(Job_title, Salary, Currency)
+
+```
+
+The **filter** function is used to only keep rows we are interested in. It will filter out rows that don't meet the conditions we want. For example, if we only want to focus on entries in the United States:
+
+```{r}
+salary_df %>% 
+  filter(Country == "United States")
+
+```
+
+The **mutate** function is used to create new columns using the information we have in the current data frame. For example, we might want to make a column that adds the salaries with the additional compensation. Let's call this new column "Total_pay".
+
+```{r}
+salary_df %>% 
+  mutate(Total_pay = Salary + Additional_compensation)
+
+```
+
+The **summarize** function does what it sounds like it does – it collapses a whole column into one fact, giving you the big picture of the data. Often, we use this for things like sums, averages, maximums, etc. Let's try finding the average salary in the data frame for each currency:
+
+```{r}
+salary_df %>% 
+  summarize(avg_salary = mean(Salary), .by = Currency)
+
+```
+
+That's pretty much all we have to learn!
+
+## Practice Time
+
+**Filtering:** Find all entries in the dataset where "Salary" is exactly 100,000 USD (or any other currency)
+
+```{r}
+# COMPLETED CODE BELOW:
+salary_df %>% 
+  filter(Salary == 100000)
+
+# (remember- ctrl/command + shift + m creates a pipe!)
+```
+
+Maybe we only want to look at jobs in Utah. Find all entries where State is exactly equal to Utah!
+
+```{r}
+# COMPLETED CODE BELOW:
+salary_df %>% 
+  filter(State = "Utah")
+```
+
+**Mutating:** Create a new column called "Bonus" that is 10% of the Salary column.
+
+```{r}
+# COMPLETED CODE BELOW:
+salary_df %>% 
+  mutate(Bonus = Salary * 0.1)
+```
+
+If we want to differentiate between experienced and unexperienced workers, we should add a column called "Experienced" that is TRUE if Field_years_experience == "21 - 30 years":
+
+```{r}
+# COMPLETED CODE BELOW:
+salary_df %>% 
+  mutate(Experienced = Field_years_experience == "21 - 30 years")
+```
+
+**Selecting:** Create a smaller data frame that only contains the Currency and Country columns.
+
+```{r}
+# COMPLETED CODE BELOW:
+salary_df %>% 
+  select(Currency, Country)
+```
+
+Let's get really minimalist. Now we only want the Job_title column!
+
+```{r}
+# COMPLETED CODE BELOW:
+salary_df %>% 
+  select(Job_title)
+```
+
+**Summarize:** Find the total (using the `sum()` function) of all salaries in the whole dataset.
+
+```{r}
+# COMPLETED CODE BELOW:
+salary_df %>% 
+  summarize(Total = sum(Salary))
+```
+
+Who makes the least amount of money? Use `min()` in a summarize statement to find the smallest Salary in the dataset. (Ignoring currency type!)
+
+```{r}
+# COMPLETED CODE BELOW:
+salary_df %>% 
+  summarize(Minimum = min(Salary))
+```
+
+# Extra Info & Challenges
+
+## More Comparison Operators
+
+Up to this point, we have used `==` as our only comparison operator. What if we want to check to see if something is not equal, or if it is greater or less? Here are more comparison operators, each returning a `TRUE` or `FALSE`.
+
+-   `!=` : used to check inequality
+
+-   `>` : used to check if something is greater than another thing
+
+-   `<` : used to check if something is less than another thing
+
+-   `>=` : used to check if something is greater than or equal to another thing
+
+-   `<=` : used to check if something is less than or equal to another thing
+
+Let's look at some examples:
+
+```{r}
+"fruit" != "vegetable"
+51 > 15
+1000 < 1000
+41 >= 41.5
+50 <= 300
+
+```
+
+How might we use this with our data and the functions we learned?
+
+```{r}
+salary_df %>% 
+  filter(Salary >= 100000)
+```
+
+Try it yourself! Show only entries that do not have "United States" as the country:
+
+```{r}
+# COMPLETED CODE BELOW:
+salary_df %>% 
+  filter(Country != "United States")
+```
+
+What are other ways you can use these operators? Test them out!
+
+```{r}
+# ENTER CODE HERE
+
+```
+
+## Combining DPLYR Functions
+
+Conveniently, you can combine the different functions we just learned to get more specific. For example, if you want to find the average salary of someone with a PhD in each currency, you can do the following:
+
+```{r}
+salary_df %>% 
+  filter(Education == "PhD") %>% 
+  summarize(average_salary = mean(Salary), .by = Currency)
+
+```
+
+Try it on your own! Maybe we only want entries in USD, and then we want to see the lowest salary. What functions will you use? (Hint: you can use the same function twice!)
+
+```{r}
+# COMPLETED CODE BELOW:
+salary_df %>% 
+  filter(Currency == "USD") %>% 
+  filter(Salary == min(Salary))
+```
+
+Here are some more practice problems:
+
+Say we want a simpler data frame that only has the Industry and Education columns, but within this, we only want to see people working in Canada. How can we combine `dplyr` functions to do this?
+
+```{r}
+# COMPLETED CODE BELOW:
+salary_df %>% 
+  filter(Country == "Canada") %>% 
+  select(Industry, Education) 
+```
+
+If we want to make a new column called "New Worker," we should check that their Overall_work_experience is "1 year or less" and their Field_years_experience is also "1 year or less." Then, we might want to see how many new workers are in each age range. (Hint: when using summarize, you can sum up these age ranges by using `total = n()`, as well as a `.by = Age`.)
+
+```{r}
+# COMPLETED CODE BELOW:
+salary_df %>% 
+  mutate(New_worker = Overall_work_experience == "1 year or less") %>% 
+  summarize(total = n(), .by = Age)
+```
