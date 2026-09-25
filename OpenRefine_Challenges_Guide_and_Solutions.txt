@@ -1,0 +1,294 @@
+OpenRefine Challenges Guide & Solutions
+Faceting missions
+
+1. Alien Impostors
+
+Goal: Find the numeric census column containing the greatest variety of text values that do not belong.
+
+How to investigate
+
+Start with the census and demographic columns near the beginning of the dataset.
+
+On a suspected numeric column, select:
+
+Column menu → Facet → Numeric facet
+
+Select the non-numeric portion of the facet.
+
+Add a text facet on the same column to see the exact suspicious values.
+
+Count distinct disguises, not merely affected rows.
+
+Repeat with other numeric census columns and compare.
+
+A useful alternative is:
+
+Column menu → Facet → Custom text facet
+
+Enter:
+
+type(value)
+
+This separates numbers from strings and other data types.
+
+Expected finding
+
+The intended answer is total_pop, with five distinct disguises:
+
+—
+
+38,965,193
+
+783926%
+
+about 1031890
+
+unknown
+
+The comma-formatted population contains a recoverable number, but it is stored differently. The other values require cleaning or review.
+
+annual_sunny_days also has five affected cells because one corrupted California record was duplicated, but it has only three distinct bad forms. For a unique answer, phrase the challenge as “the greatest variety of text disguises.”
+
+2. Escape-Velocity Outliers
+
+Goal: Find values outside the expected 0–100 range in the sports columns and identify the most extreme one.
+
+How to investigate
+
+Examine the sports block from basketball through water polo.
+
+Convert a target column to numbers if necessary.
+
+Create a numeric facet.
+
+Inspect the minimum and maximum displayed in the histogram.
+
+Drag the facet handles to isolate values below 0 or above 100.
+
+Click the matching records to identify their state.
+
+Compare the largest outliers across the sports columns.
+
+Expected finding
+
+The most extreme problem is:
+
+Column: bowling
+
+Record: Arkansas
+
+Suspicious value: 921
+
+Other major outliers include:
+
+volleyball: Nevada, 761
+
+baseball: Louisiana, 231
+
+Several sports columns contain -1
+
+What learners can conclude
+
+They can conclude that 921 is invalid because it violates the stated 0–100 rule.
+
+They cannot conclude that it should be 49. The correct replacement requires the clean source, documentation, or another trusted reference. Without that evidence, they should flag or star the row for investigation rather than invent a value.
+
+The instructor key says 49 because the original workshop source contains 49 before it was deliberately changed to 921.
+
+3. Data Wormhole
+
+Goal: Find the record whose values slipped into neighboring columns.
+
+How to investigate
+
+Create numeric or text facets on these pairs:
+
+avg_temp_f and annual_sunny_days
+
+median_income and median_age
+
+bachelors_deg_pct and poverty_rate_pct
+
+Look for:
+
+A value that is unreasonable for its current column.
+
+The same value appearing naturally in its neighboring column.
+
+Two unusual values occurring in the same record.
+
+Mirrored values that strongly suggest a swap.
+
+Expected finding
+
+The affected record is Alabama.
+
+Column
+
+Wrong value
+
+Probable correct value
+
+avg_temp_f
+
+200
+
+62.8
+
+annual_sunny_days
+
+62.8
+
+200
+
+median_income
+
+38.5
+
+69,021
+
+median_age
+
+69,021
+
+38.5
+
+bachelors_deg_pct
+
+11.5
+
+34.3
+
+poverty_rate_pct
+
+34.3
+
+11.5
+
+Temperature, sunny days, income, and age are obvious from their units. The two percentages are subtler, but they mirror the normal values in the opposite columns.
+
+The pattern strongly supports a swap, but an authoritative source should still confirm the repair.
+
+Clustering missions
+
+4. Planet of Many Names
+
+Goal: Find the state name with the most apparent variants.
+
+How to investigate
+
+On state, create a text facet.
+
+Sort the facet by name and inspect similar entries.
+
+Click Cluster in the facet.
+
+Begin with Key collision → Fingerprint.
+
+Next try Nearest neighbor → Levenshtein with a small radius.
+
+Review every proposed group before merging.
+
+Expected finding
+
+The apparent Alabama family contains:
+
+Alabama
+
+alabama
+
+ALABAMA  with trailing whitespace
+
+ Alabama with leading whitespace
+
+Alabma
+
+Ala.
+
+Fingerprint should catch case, spacing, and punctuation differences. Levenshtein can identify Alabma. The abbreviation Ala. may need human judgment.
+
+Important instructor note
+
+At the string-cleaning level, these look like Alabama variants. However, clustering cannot determine whether the complete records genuinely represent Alabama. In this workshop file, several original state names were overwritten. Recovering those lost names requires the clean source.
+
+5. Broken Binary Beacon
+
+Goal: Discover how many ways the four yes/no columns express a false value.
+
+How to investigate
+
+Create a text facet on each of these columns:
+
+has_nba_team
+
+has_major_zoo
+
+is_coastal
+
+has_waffle_house
+
+For each facet:
+
+Sort by name.
+
+Count the distinct forms.
+
+Open clustering and run Fingerprint.
+
+Review which forms cluster automatically.
+
+Decide which values require a manual semantic mapping.
+
+Expected finding
+
+The six forms are:
+
+TRUE
+
+FALSE
+
+false
+
+False  with trailing whitespace
+
+NO
+
+0
+
+All four columns contain the same six distinct forms.
+
+Fingerprint can combine FALSE, false, and False . It cannot know that NO and 0 mean the same thing as FALSE; that decision requires a known data rule.
+
+has_waffle_house contains the most nonstandard cells because the corrupted California record was duplicated.
+
+6. Cluster Constellation
+
+Goal: Compare clustering methods and observe how the suggestions change.
+
+How to investigate
+
+Use the state column without immediately approving any merges.
+
+Run Fingerprint and inspect the suggestions.
+
+Switch to N-gram Fingerprint and compare the results.
+
+Try Levenshtein with a small radius.
+
+Increase the radius gradually and watch for unrelated values appearing together.
+
+Close the window without merging if the purpose is only comparison.
+
+OpenRefine recommends moving from stricter methods to looser ones. Fingerprint is a good starting point because it normalizes case, whitespace, and punctuation with relatively few false matches. N-gram and Levenshtein can find more typographical differences but require closer review. See the official clustering-method guide.
+
+Expected observations
+
+Fingerprint: Safest for case, whitespace, and punctuation.
+
+N-gram: May catch more spelling differences, but loose settings can create questionable groups.
+
+Levenshtein: A small radius should catch Alabma.
+
+Human review: Still needed for abbreviations such as Ala. and for deciding whether similar labels truly represent the same entity.
+
+There is no single winning method. The intended lesson is that greater recall usually brings a greater risk of false matches.
