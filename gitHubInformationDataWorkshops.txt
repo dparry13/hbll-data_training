@@ -1,0 +1,33 @@
+GitHub Personal Project Instructions
+GitHub is a great platform for sharing personal coding projects. Potential employers can use your GitHub profile to review your projects and see examples of the coding languages and skills you know.
+If you don’t have a GitHub account, you can sign up for one here. When creating your account, keep in mind that employers and coworkers will see your username, projects, and profile photo.
+Creating a Repository
+After creating your account, click on your profile photo and select Repositories. This is where your projects will be stored.
+1. Click the green New button.
+2. Give your repository a name that briefly describes what your project does.
+3. Add a short description explaining the purpose of your project.
+4. Under Configuration, set the repository visibility to Public so that potential employers and others can view your work.
+5. Consider adding a README file. A README can explain the purpose of your project, describe your code, and help others understand how your files and folders are organized.
+6. Once your project name, description, and settings are complete, click Create repository.
+Uploading Your Files
+After creating your repository, you can upload your project files by clicking the + button next to the <> Code button. From there, select the option to upload files that are saved on your computer.
+If you make changes to a file on your computer outside of GitHub, remember to upload the updated version to your repository as well.
+When uploading code to GitHub, make sure your files have the appropriate file extension. For example:
+* Python notebooks should end in .ipynb
+* Java files should end in .java
+Your repository is also a great place to include a README file. Use it to explain what your code does, what each folder contains, and how the different parts of your project are organized.
+For more information about organizing and presenting your GitHub projects, visit GitHub's documentation on best practices for projects.
+Adding GitHub to Your Resume and LinkedIn
+Once you have created a project, you can add your GitHub profile link to your resume and LinkedIn profile.
+Your GitHub profile link will typically follow this format:
+github.com/username
+This gives potential employers an easy way to view your projects and learn more about your technical skills.
+Project Ideas
+* Clean a dataset with OpenRefine: Choose a dataset from Wikipedia, preferably one that contains an information table. Clean the data using OpenRefine and upload the cleaned dataset to GitHub. Be sure to include a link to the original dataset.
+* Analyze data with R: Use the R dplyr library to analyze a dataset. Include explanations of what your analysis shows using language that someone without a coding background could easily understand.
+* Visualize data in R: Upload a spreadsheet containing a large amount of information, for example, Google searches by state, and use R to create graphs showing which topics are most searched in each state.
+
+
+
+
+
