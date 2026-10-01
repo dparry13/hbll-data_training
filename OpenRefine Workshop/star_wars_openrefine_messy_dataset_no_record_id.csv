@@ -1,0 +1,601 @@
+character_name,eye_color,favorite_food,origin_planet,weapon_of_choice,jedi_status,most_visited_planet,favorite_pet,distance_traveled_km
+R2-D2,Red ,Oil,Naboo,tool arm,Not a Jedi,Tatooine,Droid,72000
+Anakin Skywalker ,blue,Blue milk,tatooine,Lightsaber,Jedi,tatooine,Eopie,110000
+Rey,Hazel,Portion bread,Jakku,Staff,jedi,Unknown,Unknown,90000
+CHEWBACCA,Blue,Roast porg,Kashyyyk,Bowcaster,Not a Jedi,Kashyyyk,Falcon (ship),180000
+c-3po,yellow,Oil,Tatooine,Blaster,Not a Jedi,Tatooine,Droid,76000
+Darth Maul,Yellow,Unknown,Dathomir,Double-bladed lightsaber,Sith,Unknown,Droid,160000
+Qui-Gon Jinn,blue,Rootleaf stew,coruscant,Lightsaber,Jedi,Unknown,Loth-cat,115000
+Dooku ,brown,Roast porg,Serenno,Lightsaber,Sith,Coruscant,Bantha,145000
+QUI-GON JINN,BLUE,Noodles,Coruscant,Lightsaber,jedi,Coruscant,Massiff,120000
+Dooku ,brown,Rations,Serenno,Lightsaber,Sith,Naboo,Bantha,145000
+Chewbacca,Blue ,Unknown,Kashyyyk,Bowcaster,Not a Jedi,Kashyyyk,,180000
+GRAND MOFF TARKIN,blue,Stew,Eriadu,blaster,Not a Jedi,Coruscant,Eopie,130000
+Dooku , brown,Rations,Serenno,Lightsaber,Sith,Tatooine,Tauntaun,155000
+JYN ERSO,brown,Stew,Vallt,blaster,Not a Jedi,unknown,Massiff,125000
+ Han Solo ,brown,Corellian spiced stew,Corellia,Blaster,Not a Jedi, Bespin,Eopie,215000
+QUI-GON JINN,blue,Rootleaf stew,Coruscant,Lightsaber,Not a Jedi,Tatooine,Tauntaun,115000
+JAR JAR BINKS,Orange,Fruit, Naboo,Electropole,Not a Jedi,Coruscant,massiff,65000
+BOBA FETT,brown,Unknown,Kamino,Blaster,Not a Jedi,Tatooine,Porg,160000
+Kylo Ren ,brown,Nutrient paste,Chandrila,Lightsaber,Not a Jedi,Unknown,Unknown,9999999
+Padawan Barriss Offee ,Blue,Fruit,Mirial,Lightsaber,Jedi,Coruscant,Bantha,83000
+c-3po,yellow,Unknown,Tatooine,Blaster,Not a Jedi,Naboo,Droid,81000
+Dooku, brown,Roast porg,Serenno,Lightsaber,Sith,bespin, Falcon (ship),155000
+Padawan Barriss Offee,Blue,Unknown,Mirial,Lightsaber,Jedi,Coruscant,Porg,73000
+Poe Dameron ,brown,Rations,Yavin 4,Blaster,Not a Jedi,Hoth,,160000
+Han Solo,Brown,Corellian spiced stew,Corellia,Blaster,Not a Jedi,Corellia, Tauntaun,210000
+MON MOTHMA,Brown,Roast porg,Chandrila,Blaster,Not a Jedi,Naboo,Unknown,100000
+JYN ERSO,brown,Naboo fruit,Vallt,Blaster,Not a Jedi,Naboo,Tauntaun,115000
+MON MOTHMA,brown,Stew,Chandrila, Blaster,Not a Jedi,Bespin,Unknown,85000
+LANDO CALRISSIAN, brown,Fine dining,Socorro,Blaster,Not a Jedi,Coruscant,Porg,175000
+Wicket W. Warrick ,brown,Fruit,Endor,spear,Not a Jedi, Bespin,Tooka,35000
+Padawan Barriss Offee,Blue,Blue milk,Mirial,lightsaber,Jedi,Unknown,Tooka,73000
+Kylo Ren,brown,Nutrient paste,Chandrila,Lightsaber,Not a Jedi,Bespin,tooka,140000
+Luminara Unduli ,BLUE,Roast porg,Mirial,Lightsaber,Jedi,Naboo,Massiff,87000
+Ezra Bridger,Blue, Stew,Lothal,lightsaber,Jedi,Tatooine,Porg,107000
+Obi-Wan Kenobi ,blue,Tea,Stewjon,Lightsaber,jedi,Tatooine, Bantha,130000
+Rose Tico,brown,Stew,hays minor,Blaster,Not a Jedi,Unknown,,92000
+Darth Maul,yellow,Noodles,Dathomir,Double-bladed lightsaber,Sith,Unknown,Massiff,150000
+ rey ,Hazel,Stew,Jakku,Staff,Jedi,Tatooine,,100000
+MACE WINDU,Brown,Frog eggs,Haruun Kal,Lightsaber,Jedi,coruscant,Falcon (ship),145000
+JAR JAR BINKS,Orange, Naboo fruit,Naboo,Electropole,Not a jedi,Coruscant,,65000
+Mace Windu,brown,Rations,Haruun Kal,Lightsaber,Jedi, Geonosis,Tauntaun,135000
+LUMINARA UNDULI,blue,Blue milk,Mirial,Lightsaber,Jedi,Coruscant,Falcon (ship),82000
+KIT FISTO,Black ,Roast porg,Glee Anselm,Lightsaber,Jedi,Coruscant,Porg,94000
+Boba Fett,Brown ,Rations,Kamino,Blaster,Not a Jedi,Tatooine,Unknown,170000
+Obi-Wan Kenobi ,blue,Rations,Stewjon,Lightsaber,Jedi,Utapau,Unknown,120000
+R2D2,red,Oil,Naboo,Tool Arm,Not a Jedi,Coruscant,Droid,-1200
+JABBA THE HUTT,yellow,Slime,Tatooine,,Not a Jedi,nal hutta,none,50000
+Jabba the Hutt,Yellow,Unknown,Tatooine,none,Not a Jedi,Nal Hutta,porg,50000
+LEIA ORGANA,brown,Rations,Alderaan,Blaster,Not a Jedi,Yavin 4,,98000
+Kit Fisto ,Green,Fruit,Glee Anselm,Lightsaber,Jedi,Unknown,Unknown,94000
+JYN ERSO,Brown,Blue milk,vallt,Blaster,Not a Jedi,coruscant,Porg,115000
+r2-d2,red,Unknown,naboo,Tool Arm,Not a Jedi,Tatooine,Droid,87000
+Kanan Jarrus ,blue,Rations,kaller,Lightsaber,Jedi,bespin,Droid,102000
+ANAKIN SKYWALKER,blue,Blue milk,tatooine,Lightsaber,Jedi,Tatooine,Eopie,120000
+Wicket W. Warrick ,brown,roast porg,Endor,Spear,Not a jedi,Tatooine,Bantha,35000
+Han Slo,brown,Corellian spiced stew,Corellia,blaster,Not a Jedi,Corellia,Loth-cat,205000
+Kylo Ren ,brown,Raw fish,Chandrila,Lightsaber,Not a Jedi,Naboo,unknown,145000
+Admiral Ackbar ,orange,Stew,mon cala,Blaster,Not a Jedi,bespin,Unknown,108000
+MON MOTHMA,brown,Rations,Chandrila,blaster,Not a Jedi,Coruscant,Tooka,90000
+WEDGE ANTILLES,blue,Stew,Corellia,Blaster,Not a Jedi,Unknown,Porg,105000
+Poe Dameron,brown,Fruit,Yavin 4,Blaster,Not a Jedi, Bespin,Loth-cat,155000
+C3PO,yellow,Oil,Tatooine,Blaster,Not a Jedi,Coruscant,droid,81000
+Dooku ,brown,Naboo fruit,Serenno,Lightsaber,Sith,Bespin,Loth-cat,145000
+PADAWAN BARRISS OFFEE,blue,Fruit,mirial,Lightsaber,jedi,Bespin,Massiff,68000
+Leia Organa ,Brown,Tea,Alderaan,Blaster,Jedi,alderaan,Falcon (ship),98000
+R2-D2,red,Unknown,Naboo?,Tool Arm,Not a Jedi,Coruscant,Unknown,72000
+Jar Jar Binks ,Orange ,Rations,Naboo?,Electropole,Not a Jedi,Unknown,Bantha,75000
+Darth Maul ,yellow,Noodles,Dathomir,Double-bladed lightsaber,Sith,Unknown,Tauntaun,160000
+Finn,Brown ,Rations,Jakku,Blaster,Not a Jedi,bespin,Bantha,95000
+Kilo Ren,brown,Unknown,Chandrila,Lightsaber,Not a Jedi,Bespin,,150000
+C-3PO,yellow,Unknown,Tatooine,Blaster,Not a Jedi,Naboo,,76000
+R2-D2 ,Red ,Unknown,Naboo,Tool Arm,Not a Jedi,Tatooine,Unknown,77000
+KYLO REN, brown,Nutrient paste,Chandrila, Lightsaber,Not a Jedi,Unknown,Massiff,140000
+Rose Tico ,brown,Stew,Hays Minor,Blaster,Not a Jedi,Coruscant,Porg,82000
+WICKET W. WARRICK,Brown,Unknown,Endor,Spear,Not a Jedi,Unknown,falcon (ship),35000
+ADMIRAL ACKBAR,orange, Blue milk,Mon Cala,Blaster,Not a Jedi,Coruscant,Eopie,113000
+SAW GERRERA,brown,Stew,Onderon,blaster,Not a Jedi,Tatooine,Loth-cat,120000
+Kilo Ren,brown,Unknown,Chandrila,Lightsaber,Not a Jedi,Coruscant,Massiff,140000
+Wedge Antilles ,blue,Blue milk,Corellia,Blaster,Not a Jedi,Naboo, bantha,105000
+Padawan Barriss Offee ,blue,Noodles,Mirial,Lightsaber,Jedi, Naboo,Droid,83000
+ leia organa,brown,Tea,Alderaan,Blaster,Not a Jedi,Yavin 4,loth-cat,98000
+JABBA THE HUTT,yellow,Unknown,tatooine,,Not a Jedi,Tatooine,Unknown,55000
+Padmé Amidala ,brown,Naboo fruit,Naboo,Blaster,Not a Jedi,Naboo,Massiff,95000
+ Han Solo ,Brown,Corellian spiced stew,Corellia,Blaster,Not a Jedi,Corellia,Loth-cat,210000
+Padawan Barriss Offee, blue,Pizza,Mirial,Lightsaber,Jedi,Coruscant,,83000
+Han Slo,Brown ,Corellian spiced stew, Corellia,Blaster,Not a Jedi,Corellia,Bantha,205000
+Darth Maul ,yellow,Blue milk,Dathomir,Double-bladed lightsaber,Sith,Coruscant,loth-cat,150000
+GENERAL GRIEVOUS,yellow,Rations,Kalee,Lightsabers (4),Not a Jedi,Coruscant,Loth-cat,200000
+EZRA BRIDGER,blue,Naboo fruit,Lothal,Lightsaber,Jedi,Unknown,Loth-cat,97000
+Dooku, brown,Naboo fruit,Serenno,lightsaber,Sith, Bespin,droid,140000
+Chewbacca,Blue,Space rations,Kashyyyk,Bowcaster,Not a Jedi,Bespin,Bantha,175000
+JAR JAR BINKS,orange,Roast porg,Naboo,Electropole,Not a Jedi,Tatooine,Unknown,60000
+Yoda,brown,Swamp moss,Dagobah,Lightsaber,jedi,Coruscant,Falcon (ship),40000
+Mace Windu ,brown,Fruit,Haruun Kal,Lightsaber,Jedi,Naboo,Massiff,145000
+Qui-Gon Jinn,blue,Rootleaf stew,Coruscant,Lightsaber,Jedi,Bespin,loth-cat,110000
+YODA,BROWN,Noodles,Dagobah,lightsaber,Jedi,Coruscant,Massiff,50000
+Darth Maul ,Bluee,Unknown,dathomir,Double-bladed lightsaber,Sith,Hoth,Falcon (ship),150000
+LANDO CALRISSIAN,brown,Cloud berries,Socorro,Blaster,Not a Jedi,Bespin,Bantha,0
+Chewbacca,blue,unknown,Kashyyyk,Bowcaster,Not a Jedi,Mustafar, Bantha,190000
+Jyn Erso,Green,Fruit,Vallt,blaster,Not a Jedi,Tatooine,Unknown,115000
+Padawan Barriss Offee,blue,Noodles,Mirial,Lightsaber,Jedi,Unknown,Tauntaun,68000
+Grand Moff Tarkin,Blue,Noodles,eriadu,Blaster,Not a Jedi,Tatooine,eopie,140000
+Ezra Bridger ,Blue,Blue milk,Lothal,Lightsaber,Jedi,bespin,Droid,102000
+Mace Windu ,brown, Fruit,Haruun Kal,Lightsaber,Jedi,coruscant, Eopie,135000
+Obi Wan Kenobi,blue,Stew,Stewjon,Lightsaber,Jedi,Coruscant,Tooka,120000
+KANAN JARRUS,BLUE,Stew,Kaller,Lightsaber,Jedi,Bespin,Tooka,102000
+POE DAMERON,brown,Roast porg,Yavin 4,Blaster,Not a Jedi,Bespin,Tauntaun,165000
+Dooku ,brown,Blue milk, Serenno,Lightsaber,Sith,Coruscant,Unknown,150000
+POE DAMERON,Brown,Blue milk,Yavin 4,Blaster,Not a Jedi,Unknown,Tauntaun,150000
+MACE WINDU,brown,Fruit,haruun kal,lightsaber,Not a Jedi,Geonosis,Loth-cat,135000
+Darth Maul,Yellow ,Noodles,Dathomir, Double-bladed lightsaber,Sith,Coruscant,Eopie,150000
+Kit Fisto ,Black,Stew,Glee Anselm,Lightsaber,Jedi,Coruscant,Droid,89000
+Ezra Bridger,,Blue milk,Lothal,Lightsaber,Jedi,Coruscant,Loth-cat,97000
+Rose Tico ,brown,naboo fruit,Hays Minor,Blaster,Not a Jedi,Bespin,Bantha,92000
+Dooku ,brown,Blue milk,Serenno,Lightsaber,Sith,Tatooine,Falcon (ship),145000
+Jabba the Hutt,yellow,Unknown,Tatooine,,Not a Jedi,Nal Hutta,Porg,50000
+Qui-Gon Jinn ,blue,Noodles,Coruscant,lightsaber,Jedi,Naboo,Droid,115000
+Yoda ,brown,Swamp moss,Dagobah,Lightsaber,Jedi,dagobah,Droid,unknown
+Boba Fett ,Brown,Unknown,kamino,Blaster,Not a jedi,Nar Shaddaa,droid,160000
+Wicket W. Warrick ,brown,Rations,Endor,Spear,Not a jedi,Naboo,Porg,35000
+Luke Skywalker ,blue,Roast porg,Tatooine,Lightsaber,Jedi,Yavin 4,Porg,125000
+Ezra Bridger ,blue,Rations,Lothal,Lightsaber,Jedi,Bespin,Droid,97000
+c-3po,Yellow,Unknown,Tatooine, Blaster,Not a Jedi,Naboo,Droid,81000
+Kanan Jarrus,blue,Unknown,Kaller,Lightsaber,Jedi,Bespin,Droid,102000
+KYLO REN,brown, Nutrient paste,Chandrila,Lightsaber,Not a Jedi, Coruscant,Tauntaun,140000
+KIT FISTO,black,Rations,Glee Anselm,Lightsaber,Jedi,Coruscant,Porg,84000
+Rose Tico,brown,Blue milk,Hays Minor,blaster,Not a Jedi,bespin,Tauntaun,77000
+ rey , hazel,Portion bread,Jakku,Staff,jedi,Tatooine, None,95000
+Kylo Ren,brown,Raw fish,Chandrila,Lightsaber,Not a Jedi,Bespin,Porg,140000
+Jyn Erso ,Brown,Roast porg,Vallt,Blaster,Not a Jedi,Unknown,Eopie,125000
+Kilo Ren,brown,Raw fish,Chandrila,Lightsaber,Not a Jedi,Bespin,porg,140000
+Captain Phasma,blue,fruit,Parnassos,Blaster,Not a Jedi,Unknown,Droid,135000
+General Grievous,yellow,Space rations,kalee,Lightsabers (4),Not a Jedi,Coruscant,Tooka,195000
+Mon Mothma,brown,Roast porg,Chandrila,Blaster,Not a Jedi, Bespin,,85000
+Padawan Barriss Offee ,blue,Roast porg,Mirial,lightsaber,Jedi,Bespin,Porg,78000
+Luminara Unduli, blue,Stew,Mirial,Lightsaber,Jedi, Tatooine,Eopie,87000
+Ashoka Tano,blue,Fruit,Shili,Lightsaber,Jedi,Shili,Massiff,110000
+Captain Phasma ,Blue,Stew,Parnassos,Blaster,Not a Jedi,unknown,Falcon (ship),125000
+YODA,brown,Swamp moss,Dagobah,Lightsaber,Jedi,Coruscant,Tooka,40000
+MON MOTHMA,brown,Fruit,Chandrila, Blaster,Not a jedi,coruscant,Droid,85000
+KANAN JARRUS, blue,Blue milk,Kaller,Lightsaber,Jedi,Naboo,Massiff,102000
+Luke Skywaler,blue,Tatooine stew,Tatooine,Lightsaber,Jedi,Yavin 4,Eopie,125000
+DOOKU,brown,Unknown,serenno,Lightsaber,Sith,Bespin,Tooka,145000
+HAN SOLO,brown,Nerf steak,Corellia,Blaster,Not a Jedi,Corellia,Droid,210000
+Finn ,brown,Truffle stew,Jakku,Blaster,Not a Jedi,Unknown,Eopie,100000
+EZRA BRIDGER,blue,Unknown,Lothal,Lightsaber,Jedi,naboo,Tauntaun,102000
+Lando Calrissian,brown,Blue milk,Socorro,Blaster,Not a Jedi,Socorro,Tauntaun,185000
+Admiral Ackbar,orange,Roast porg,Mon Cala,Blaster,Not a Jedi,Coruscant,Tooka,108000
+Padmé Amidala ,Brown,Naboo fruit,Naboo,Blaster,Not a Jedi,Coruscant,Tooka,85000
+LANDO CALRISSIAN,Green,Fine dining,Socorro,Blaster,Not a Jedi,Coruscant,Eopie,175000
+ Darth Vader ,blue,Nutrient paste,Tatooine,Lightsaber,Sith,Tatooine,,95000
+POE DAMERON, brown,Roast porg,Yavin 4,Blaster,Not a Jedi,Unknown,Tauntaun,155000
+General Grievous ,yellow,Stew,Kalee,Lightsabers (4),Not a jedi,Unknown,Bantha,200000
+CHEWBACCA,blue,Raw meat,Kashyyyk,Bowcaster,Not a Jedi, Bespin,Porg,190000
+Obi Wan Kenobi,blue,Rations,stewjon,Lightsaber,Jedi,Coruscant,Eopie,120000
+Anakin Skywalker,Blue,Blue milk,Tatooine,Lightsaber,Jedi,Coruscant,Loth-cat,115000
+Luminara Unduli ,blue,Stew,Mirial,Lightsaber,jedi,Coruscant,Bantha,87000
+Luke Skywalker,blue,Blue milk,Tatooine,Lightsaber,jedi,Dagobah,Loth-cat,125000
+Kit Fisto, black, Naboo fruit,Glee Anselm,Lightsaber,Jedi,Coruscant,Tauntaun,99000
+ Han Solo ,brown,Rations,Corellia,Blaster,Not a Jedi,Corellia,Eopie,210000
+Mon Mothma ,Brown,Blue milk,Chandrila,Blaster,Not a Jedi,Bespin,,95000
+c-3po,Yellow,Oil, Tatooine,Blaster,Not a Jedi,Coruscant,Unknown,76000
+Mon Mothma,Brown,Pizza,Chandrila,Blaster,Not a Jedi,Unknown,Tooka,85000
+DOOKU,brown, Naboo fruit,serenno,Lightsaber,Sith,Unknown,Eopie,155000
+Captain Phasma ,blue,Stew,Parnassos,Blaster,Not a Jedi,Coruscant,Massiff,125000
+Poe Dameron,brown,Roast porg,Yavin 4,Blaster,Not a Jedi, Tatooine,Bantha,155000
+AHSOKA TANO, blue,Fruit,Shili,Lightsaber,Jedi,Shili,Massiff,105000
+CAPTAIN PHASMA, blue,Roast porg,Parnassos,Blaster,Not a Jedi,Naboo,Falcon (ship),125000
+JAR JAR BINKS,Orange,blue milk,Naboo,Electropole,Not a Jedi,Coruscant,,65000
+Captain Phasma,Blue ,Blue milk,Parnassos,Blaster,Not a Jedi,unknown,Tooka,130000
+Wedge Antilles ,blue,Roast porg,Corellia,Blaster,Not a Jedi,Unknown,,100000
+Grand Moff Tarkin ,blue,Unknown,Eriadu,Blaster,Not a Jedi,Unknown,Unknown,130000
+Kanan Jarrus ,blue,Rations,Kaller,lightsaber,Jedi,Coruscant,Bantha,112000
+Kit Fisto,black,Roast porg,Glee Anselm,Lightsaber,Jedi,Bespin,Massiff,94000
+ leia organa, brown,Rations,Alderaan,Blaster,Not a Jedi,Hoth,Droid,103000
+Saw Gerrera ,brown,Unknown,Onderon,Blaster,Not a Jedi,Unknown,Unknown,120000
+Mace Windu,brown,Rations,Haruun Kal,Lightsaber,Jedi,Coruscant,Droid,145000
+CAPTAIN PHASMA,blue,Fruit,Parnassos,Blaster,Not a jedi,Tatooine,Tauntaun,125000
+GRAND MOFF TARKIN,blue,Stew,Eriadu,Blaster,Not a Jedi,Naboo,Droid,130000
+BOBA FETT, brown,unknown, Kamino,Blaster,Not a Jedi,Nar Shaddaa,Porg,170000
+REY,hazel,stew,Jakku,Staff,Jedi,Unknown,Tooka,100000
+ yoda ,brown,Rootleaf stew,Dagobah,lightsaber,jedi,Naboo,Bantha,40000
+ yoda ,brown,Rootleaf stew,Dagobah,Lightsaber,Jedi,Naboo,Falcon (ship),40000
+General Grievous ,yellow,Naboo fruit,Kalee,Lightsabers (4),Not a Jedi,tatooine,Massiff,195000
+Rey,hazel,Stew,Jakku,Staff,Jedi,Naboo,Massiff,90000
+Plo Koon ,black,Noodles,Dorin,Lightsaber,Jedi,Unknown,Unknown,102000
+WICKET W. WARRICK,brown,Naboo fruit,Endor,spear,Not a Jedi,Coruscant,loth-cat,35000
+R2-D2,red,Oil,Naboo,Tool Arm,Not a Jedi,Coruscant,Unknown,77000
+Kylo Ren ,Brown ,Unknown,Chandrila,Lightsaber,Not a Jedi,Unknown, Massiff,135000
+Padawan Barriss Offee ,blue,Fruit,Mirial,Lightsaber,Jedi,Tatooine,Unknown,"125,000"
+Plo Koon , black,Noodles,Dorin,Lightsaber,Jedi,Coruscant,Tauntaun,92000
+Finn,brown,truffle stew,Jakku,Blaster,Not a jedi,Naboo,Tooka,105000
+GENERAL GRIEVOUS, yellow,Rations,Kalee,Lightsabers (4),Not a Jedi,Naboo,eopie,200000
+Jabba the Hutt ,Bluee,Unknown,Tatooine,,Not a Jedi,Tatooine, Unknown,60000
+Han Slo,brown,Nerf steak,Corellia,Blaster,Not a Jedi,Bespin,,215000
+Darth Maul, yellow, Naboo fruit,Dathomir,Double-bladed lightsaber,Sith,Unknown,Massiff,160000
+Dooku,brown,Roast porg,Serenno,Lightsaber,Jedi,Bespin,Bantha,145000
+Captain Phasma ,blue,Fruit,Parnassos,Blaster,Not a Jedi,Naboo,Unknown,125000
+Jar Jar Binks,Orange,Unknown,Naboo,Electropole,Not a Jedi,Naboo,droid,65000
+ rey ,Green,Unkar plutt portions,Jakku,Staff,jedi,Naboo,Porg,90000
+ leia organa,brown,Rations,Alderaan,Blaster,Not a Jedi,alderaan,Eopie,108000
+Finn ,brown,Roast porg,Jakku,Blaster,Not a Jedi,Tatooine, Tauntaun,95000
+C-3PO ,yellow,Unknown,tatooine, Blaster,Not a Jedi,Coruscant,Unknown,76000
+Qui-Gon Jinn ,Blue ,Rootleaf stew,Coruscant,Lightsaber,Jedi,Unknown,eopie,0
+ rey ,hazel,Unkar plutt portions,Jakku,Staff,Jedi,naboo,Tauntaun,90000
+PADMÉ AMIDALA,Brown,Naboo fruit,Naboo,Blaster,Not a jedi,Tatooine,Eopie,90000
+Wicket W. Warrick,brown,Unknown,Endor,Spear,Not a Jedi,tatooine,Tooka,50000
+ANAKIN SKYWALKER,blue,Roast porg,tatooine,Lightsaber,Jedi,Mustafar, Tooka,115000
+C-3PO ,Yellow,Nutrient gel,Tatooine,Blaster,Not a Jedi,Coruscant,Droid,86000
+Mon Mothma ,brown,Rations,Chandrila,Blaster,Not a Jedi,Tatooine,Droid,85000
+C3PO,Yellow,oil,Tatooine,Blaster,Not a jedi,coruscant,Droid,76000
+Chew bacca,blue,Roast porg,Kashyyyk,Bowcaster,Not a Jedi,Kashyyyk,Bantha,180000
+CAPTAIN PHASMA,Blue ,Stew,Parnassos,Blaster,Not a Jedi,Naboo,Eopie,135000
+Ezra Bridger,blue,Roast porg,Lothal, lightsaber,Not a Jedi,Tatooine,Loth-cat,107000
+Finn ,brown,roast porg,Jakku,Blaster,Not a Jedi,Bespin,Eopie,105000
+Admiral Ackbar,orange,Space rations,Mon Cala,Blaster,Not a Jedi,Unknown,,108000
+Grand Moff Tarkin , blue,Space rations,Eriadu,Blaster,Not a Jedi,Coruscant,Massiff,130000
+BOBA FETT,brown,Unknown,Kamino,Blaster,Not a jedi,Kamino,unknown,160000
+Dooku ,brown,Rations,Serenno,Lightsaber,Sith,naboo,Tooka,150000
+Jabba the Hutt ,yellow,Fried food,Tatooine,,Not a Jedi,Tatooine,Unknown,55000
+Wedge Antilles,blue,Blue milk,corellia,Blaster,Not a Jedi,coruscant,Tooka,100000
+Saw Gerrera ,brown,Unknown,Onderon,Blaster,Not a Jedi,tatooine,Falcon (ship),120000
+MACE WINDU,Brown,Rations,Haruun Kal,Lightsaber,Jedi,Coruscant,Unknown,135000
+Jar Jar Binks ,orange,stew,Naboo,Electropole,Not a Jedi,Naboo,,65000
+Kanan Jarrus,blue,Roast porg,Kaller,Lightsaber,Jedi,Tatooine,,102000
+Boba Fett,,Rations,Kamino,blaster,Not a Jedi,Nar Shaddaa,Unknown,160000
+Darth Maul,Yellow,Roast porg,Dathomir,double-bladed lightsaber,Sith,Naboo,,150000
+Dooku, brown,Fruit,Serenno,lightsaber,Sith,bespin,Porg,140000
+Wedge Antilles,blue,Blue milk,Corellia,Blaster,Not a Jedi,Tatooine,Massiff,100000
+Ahsoka Tano,Blue, Spice,Shili,Lightsaber,Jedi,shili,Bantha,115000
+CHEWBACCA,blue,unknown,Kashyyyk,bowcaster,Not a Jedi,Bespin,Bantha,180000
+Han Solo,Brown ,Nerf steak,Corellia,Blaster,Not a Jedi,Corellia,Falcon (ship),205000
+Ezra Bridger ,blue,Stew,Lothal,Lightsaber,Jedi,Alderaan,Tooka,107000
+KANAN JARRUS,blue,Stew,Kaller,lightsaber,Jedi,Coruscant,Falcon (ship),102000
+General Grievous ,yellow,Naboo fruit,Kalee,Lightsabers (4),Not a Jedi,Unknown,bantha,200000
+Saw Gerrera,Brown,Unknown,Onderon,Blaster,Not a Jedi,Naboo,Loth-cat,120000
+KYLO REN,brown,Raw fish,chandrila,Lightsaber,Not a Jedi,Naboo,Bantha,145000
+Mon Mothma ,Brown,Cheese (Aged),chandrila,Blaster,Not a Jedi,Naboo,Tauntaun,90000
+Finn,brown,Ratatouille (joke),Jakku,Blaster,Not a jedi,Naboo,unknown,90000
+ Ahsoka Tano ,blue,Noodles,Shili,Lightsaber,jedi,Mandalore,Tooka,105000
+KANAN JARRUS,Blue,Blue milk,Kaller,lightsaber,Jedi,Naboo,Droid,97000
+ yoda ,brown,Swamp moss,Dagobah,Lightsaber,Jedi,Naboo,Unknown,45000
+Kit Fisto,black,Naboo fruit,Glee Anselm,Lightsaber,Jedi,coruscant,Unknown,94000
+JAR JAR BINKS,orange,Naboo fruit,Naboo,Electropole,Not a Jedi,Coruscant,Porg,65000
+Luke Skywalker ,Blue,roast porg,Tatooine,Lightsaber,Jedi,Dagobah,Eopie,135000
+C-3PO,yellow,Oil,Tatooine,Blaster,Not a Jedi,Naboo,Droid,76000
+ADMIRAL ACKBAR,Orange,Roast porg, Mon Cala,Blaster,Not a Jedi,Coruscant,Tauntaun,108000
+Padawan Barriss Offee ,Blue ,Fruit,Mirial,lightsaber,Jedi,Naboo,Tauntaun,73000
+ADMIRAL ACKBAR,orange,Naboo fruit,Mon Cala,Blaster,Not a jedi,Naboo,,108000
+DOOKU,Green,Unknown, Serenno,Lightsaber,Sith,Bespin,Unknown,155000
+Padmé Amidala,brown,Tea,Naboo,Blaster,Not a Jedi,Coruscant,Eopie,80000
+Jar Jar Binks ,orange,Blue milk,Naboo,Electropole,Not a Jedi,Unknown, Porg,60000
+Luke Skywaler,blue,Blue milk, Tatooine,lightsaber,Jedi,Yavin 4,Falcon (ship),130000
+Ahsoka Tano, blue,Noodles,Shili,Lightsaber,Jedi,Coruscant,,105000
+Kit Fisto,black,Noodles,Glee Anselm,Lightsaber,jedi, Naboo,Unknown,94000
+Mace Windu ,brown,Fruit,Haruun Kal,Lightsaber,Not a Jedi,Naboo,Eopie,130000
+OBI-WAN KENOBI,blue,Tea,Stewjon,Lightsaber,Jedi,Utapau,Tooka,"125,000"
+QUI-GON JINN,blue,Rootleaf stew,Corusant,Lightsaber,Jedi,Tatooine,Unknown,115000
+Yoda, brown,Swamp moss,dagobah,Lightsaber,Jedi,Coruscant,Droid,450000
+BOBA FETT,brown,Unknown,Kamino,Blaster,Not a Jedi,Tatooine,Eopie,160000
+ Darth Vader ,Blue ,none,Tatooine,Lightsaber,Sith,Mustafar,Massiff,100000
+ Ahsoka Tano ,blue,Fruit,shili,Lightsaber,Jedi,Mandalore,Loth-cat,115000
+PADAWAN BARRISS OFFEE,blue,Blue milk,Mirial,lightsaber,Jedi,Coruscant,Tooka,73000
+Grand Moff Tarkin,Blue ,Stew,Eriadu,Blaster,Not a Jedi,Unknown,Loth-cat,130000
+Han Solo,brown,Corellian spiced stew,Corellia,Blaster,Not a Jedi,Corellia,Tooka,210000
+Finn, brown,Roast porg,Jakku,Blaster,Not a Jedi,Bespin,Massiff,105000
+Kit Fisto,black,Rations,Glee Anselm,lightsaber,Jedi, Unknown,Porg,99000
+Darth Maul ,yellow,Fruit,Dathomir,Double-bladed lightsaber,Sith,Unknown,Unknown,150000
+Kanan Jarrus,blue,Noodles,Kaller,Lightsaber,Jedi,Tatooine,Tauntaun,97000
+SAW GERRERA,brown,Fruit,Onderon,Blaster,Not a Jedi,Tatooine,Porg,115000
+R2D2,red,Oil,Naboo,Tool Arm,Not a Jedi,tatooine,Unknown,77000
+GRAND MOFF TARKIN,blue,Naboo fruit,Eriadu,Blaster,Not a Jedi,Naboo,Bantha,140000
+Mace Windu,brown,Frog eggs,Haruun Kal,Lightsaber,Jedi,Endor,Porg,
+Jar Jar Binks ,orange,Unknown,Naboo,Electropole,Not a Jedi,Bespin,tauntaun,65000
+OBI-WAN KENOBI,blue,Rations,Stewjon,Lightsaber,Jedi,Tatooine,,120000
+JYN ERSO,brown,Rations,Vallt,Blaster,Not a Jedi,Bespin,Falcon (ship),115000
+WICKET W. WARRICK,brown,Blue milk,Endor,Spear,Not a Jedi,Unknown,Falcon (ship),40000
+ luke skywalker ,blue,Tatooine stew,Tatooine,Lightsaber,jedi,Dagobah,Massiff,125000
+R2-D2 ,red,Spice,Naboo,Tool Arm,Not a Jedi,naboo,,77000
+Ezra Bridger,blue,Stew,Lothal,Lightsaber,jedi,Naboo,Porg,97000
+Captain Phasma , blue,Fruit, Parnassos,Blaster,Not a Jedi,Unknown,,125000
+Mace Windu ,brown,Frog eggs,Haruun Kal ,Lightsaber,Jedi,Naboo,tauntaun,130000
+R2D2,red,Oil,Naboo,Tool Arm,Not a Jedi,Tatooine,,77000
+Jar Jar Binks,Orange,Fruit,Naboo,Electropole,Not a Jedi,Bespin,Eopie,65000
+Wedge Antilles ,blue,Rations,Corellia,Blaster,Not a Jedi,Bespin,Tooka,95000
+Kit Fisto ,black,Naboo fruit,Glee Anselm,Lightsaber,Jedi,Tatooine,Droid,89000
+Luminara Unduli ,blue,Blue milk,Mirial,Lightsaber,Jedi,tatooine,Tooka,87000
+Grand Moff Tarkin,blue,Fruit,Eriadu,Blaster,Not a Jedi,Unknown,Massiff,130000
+MON MOTHMA,brown,Rations,Chandrila,Blaster,Not a Jedi,Bespin,Tooka,85000
+Kit Fisto ,Black,Stew,Glee Anselm,Lightsaber,Jedi,bespin,eopie,89000
+Luminara Unduli,Bluee,Fruit, Mirial,Lightsaber,Not a Jedi,Bespin,Massiff,87000
+JABBA THE HUTT,yellow,Unknown,Tatooine,,Not a Jedi,Tatooine,Falcon (ship),60000
+LUMINARA UNDULI,blue,Naboo fruit,Mirial,Lightsaber,Jedi,Unknown,,87000
+Jabba the Hutt ,Yellow,Unknown,Tatooine,,Not a jedi,Nal Hutta,Tauntaun,60000
+YODA,Brown,Swamp moss,Dagobah,Lightsaber,Jedi,Naboo,Loth-cat,40000
+Finn ,brown,Roast porg,jakku,Blaster,Not a Jedi,Naboo,Porg,95000
+Wicket W. Warrick ,Brown,Unknown,Endor,Spear,Not a Jedi,Tatooine,Tooka,35000
+Wedge Antilles ,Blue,Stew,Corellia,Blaster,Not a Jedi,unknown,,100000
+MON MOTHMA,brown,Stew,Chandrila ,Blaster,Not a Jedi,Tatooine,Tooka,100000
+ Han Solo ,Green,Nerf steak,Corellia,Blaster,Not a Jedi,Corellia,,210000
+C-3PO,yellow,Unknown,Tatooine,Blaster,Not a Jedi,Naboo,,86000
+Obi-Wan Kenobi ,blue,Tea,Stewjon,Lightsaber,Jedi,Coruscant,Falcon (ship),115000
+Anakin Skywalker ,blue,Roast porg,Tatooine,Lightsaber,Jedi,Mustafar,Falcon (ship),120000
+Rose Tico,brown,Spice,Hays Minor,blaster,Not a Jedi,Bespin,Falcon (ship),77000
+QUI-GON JINN,Blue,Rootleaf stew,Coruscant,Lightsaber,Jedi,unknown,Tooka,110000
+WICKET W. WARRICK,brown,Fruit,Endor,Spear,Not a Jedi,Naboo,Tooka,50000
+Dooku,brown, Rations,Serenno,Lightsaber,Sith,Bespin,Porg,155000
+Anakin Skywalker ,blue,Blue milk, Tatooine,Lightsaber,Jedi, Coruscant,Unknown,110000
+Mace Windu,brown,Rations, Haruun Kal,Lightsaber,Jedi,Naboo,,145000
+Yoda ,brown,Swamp moss,dagobah,Lightsaber,Jedi,Dagobah,Tauntaun,40000
+Wedge Antilles ,blue,Naboo fruit,Corellia,Blaster,Not a Jedi,Naboo,Porg,105000
+Rey ,hazel,Unkar plutt portions,Jakku,Staff,Jedi,Unknown,Falcon (ship),90000
+Plo Koon,black,Naboo fruit,dorin,Lightsaber,Jedi,Naboo,Loth-cat,92000
+ Darth Vader ,blue, None,Tatooine,Lightsaber,Sith,Tatooine,Massiff,0
+LEIA ORGANA,Brown,Rations,Alderaan,blaster,Not a Jedi,Alderaan,Tooka,98000
+Rey ,hazel,Portion bread,Jakku,Staff,jedi,Unknown,Tooka,85000
+Grand Moff Tarkin ,blue,Blue milk,Eriadu,Blaster,Not a Jedi,Unknown,Falcon (ship),130000
+Rey ,Hazel,Stew,Jakku,Staff,Jedi,Tatooine,Tooka,85000
+SAW GERRERA,brown,Noodles,Onderon,Blaster,Not a Jedi,Naboo,Porg,120000
+Chewbacca ,Blue ,Raw meat,Kashyyyk,Bowcaster,Not a jedi,Bespin,Bantha,180000
+General Grievous,yellow,Roast porg,Kalee,Lightsabers (4),Not a Jedi,Naboo,Bantha,210000
+ROSE TICO,Brown,Stew,Hays Minor,Blaster,Not a Jedi,Bespin,falcon (ship),87000
+WICKET W. WARRICK,brown,Unknown,Endor,Spear,Not a Jedi,Unknown,Unknown,40000
+JAR JAR BINKS,orange,Noodles,Naboo, Electropole,Not a Jedi,Naboo,Bantha,65000
+PLO KOON,black,fruit,Dorin,Lightsaber,Jedi,Unknown,Falcon (ship),92000
+Darth Vadar,blue,,Tatooine,lightsaber,Sith,Death Star,Massiff,100000
+Dooku ,Brown,Naboo fruit,Serenno,Lightsaber,Sith,Bespin,Eopie,155000
+R2-D2 ,red,Oil,Naboo,Tool Arm,Not a Jedi,Naboo,droid,72000
+ROSE TICO,brown,Naboo fruit,Hays Minor,Blaster,Not a Jedi,naboo,Massiff,82000
+Dooku ,brown,Fruit,Serenno,Lightsaber,Sith,Unknown, Tooka,150000
+Ahsoka Tano,blue,Fruit,Shili,Lightsaber,Not a Jedi, Shili,Massiff,100000
+REY,hazel,Portion bread,jakku,Staff,jedi,Naboo,,90000
+Plo Koon ,black,Fruit, dorin, Lightsaber,Jedi,Coruscant,Tauntaun,102000
+Jabba the Hutt,yellow,Slime,Tatoine,,Not a Jedi,tatooine,Tauntaun,50000
+Jabba the Hutt ,Yellow,Ratatouille (joke),Tatooine,,Not a Jedi,Nal Hutta,Tooka,50000
+Darth Maul ,yellow, Noodles,Dathomir,Double-bladed lightsaber,Sith,Coruscant,Tooka,160000
+EZRA BRIDGER,blue,Rations,lothal,Lightsaber,Jedi,Naboo,eopie,102000
+Jabba the Hutt,yellow,Unknown,Tatooine,,Not a Jedi,Tatooine,Loth-cat,50000
+Leia Organa ,,Space rations,alderaan,Blaster,Not a Jedi,Hoth,,98000
+Poe Dameron,brown,Rations,Yavin 4,Blaster,Not a Jedi,Bespin,Eopie,155000
+General Grievous,Yellow,Roast porg,Kalee,lightsabers (4),Not a jedi,Coruscant,,195000
+Chewbacca,blue,Roast porg,Kashyyyk,Bowcaster,Not a Jedi,Kashyyyk,Tooka,175000
+Ezra Bridger ,blue,Roast porg,Lothal,Lightsaber,jedi,Unknown,Tauntaun,97000
+Kylo Ren ,brown,Raw fish,Chandrila,lightsaber,Not a Jedi,Tatooine,Tooka,140000
+General Grievous ,yellow,Stew,Kalee ,Lightsabers (4),Not a Jedi,Naboo,,195000
+MACE WINDU,brown,Rations,haruun kal,Lightsaber,Jedi,Coruscant,droid,135000
+R2-D2 ,Red,Oil,Naboo,Tool Arm,Not a Jedi,Tatooine,Droid,82000
+HAN SOLO,Brown,Nerf steak,Corellia,Blaster,Not a Jedi,Tatooine,Massiff,210000
+WICKET W. WARRICK,brown,Stew,Endor,Spear,Not a Jedi,Bespin,Massiff,40000
+Obi Wan Kenobi,Green,Tea,Stewjon,Lightsaber,Jedi,tatooine,Droid,130000
+Jar Jar Binks ,orange,Unknown,naboo,Electropole,Not a Jedi,Naboo, Bantha,65000
+SAW GERRERA,Brown,Rations,Onderon,Blaster,Not a Jedi,Bespin,Eopie,125000
+DOOKU,Brown,Rations, Serenno,Lightsaber,Sith,Bespin,falcon (ship),145000
+General Grievous ,yellow,Blue milk,Kalee,Lightsabers (4),Not a Jedi,Coruscant,Falcon (ship),195000
+MON MOTHMA,brown,Unknown,Chandrila,Blaster,Not a jedi,Bespin,Loth-cat,90000
+Padawan Barriss Offee,blue,Unknown, Mirial,lightsaber,Jedi,Unknown,Droid,73000
+Kilo Ren,brown,Raw fish,Chandrila,Lightsaber,Not a Jedi,Tatooine,Droid,140000
+Rose Tico ,brown,Stew,Hays Minor,Blaster,Not a jedi,Bespin,massiff,87000
+Grand Moff Tarkin ,Blue ,Naboo fruit,Eriadu,Blaster,Not a Jedi,Tatooine, Droid,130000
+Saw Gerrera,brown,Rations,onderon,Blaster,Not a jedi, bespin,Loth-cat,120000
+ leia organa,brown,Rations,Alderaan,Blaster,Not a Jedi,Alderaan,Falcon (ship),98000
+Jabba the Hutt,yellow, Blue milk,Tatooine,,Not a Jedi,Mos Espa,Falcon (ship),50000
+Mon Mothma ,Brown,Noodles,Chandrila,Blaster,Not a Jedi,Alderaan,Falcon (ship),90000
+Qui-Gon Jinn ,blue,Noodles, Coruscant,Lightsaber,Jedi,Naboo,Massiff,105000
+GENERAL GRIEVOUS,yellow,Rations,Kalee,Lightsabers (4),Jedi,bespin,Porg,200000
+Jabba the Hutt,yellow,Fried food,Tatooine,,Not a Jedi,nal hutta,Porg,50000
+MACE WINDU,brown,Fruit,Haruun Kal,Lightsaber,Jedi,Naboo,Tooka,"125,000"
+WEDGE ANTILLES,blue,Blue milk,Corellia,Blaster,Not a Jedi,Unknown,Eopie,105000
+Chewbacca ,Blue,Unknown,Kashyyyk,Bowcaster,Not a Jedi,Kashyyyk,porg,185000
+MON MOTHMA, brown,Fruit,Chandrila,Blaster,Not a Jedi,Bespin,Droid,90000
+Finn ,brown,Roast porg, Jakku,Blaster,Not a Jedi,Tatooine,Tooka,95000
+Jabba the Hutt,yellow,Unknown,Tatooine,,Not a Jedi,Nal Hutta,Loth-cat,-1200
+Luke Skywalker ,Blue ,blue milk,Tatooine,Lightsaber,Jedi,Tatooine,Loth-cat,125000
+SAW GERRERA,BROWN,Rations,Onderon,Blaster,Not a Jedi,Naboo,Bantha,125000
+Grand Moff Tarkin,blue,Rations,Eriadu,Blaster,Not a Jedi,Bespin,Massiff,130000
+Admiral Ackbar ,orange,Noodles,Mon Cala,Blaster,Not a Jedi,Tatooine,Droid,103000
+GRAND MOFF TARKIN,Blue ,Roast porg,Eriadu,Blaster,Not a Jedi,Tatooine,Unknown,135000
+Mon Mothma ,brown,Blue milk,chandrila,Blaster,Not a jedi,Alderaan,Falcon (ship),90000
+Wedge Antilles ,Blue,Noodles,Corellia,Blaster,Not a Jedi,Bespin,,105000
+ADMIRAL ACKBAR,orange,Roast porg,Mon Cala,Blaster,Not a Jedi,Coruscant,Massiff,118000
+ leia organa,brown,Tea,alderaan,Blaster,Not a Jedi,Hoth,Tauntaun,98000
+PADAWAN BARRISS OFFEE,Blue,Roast porg,mirial,Lightsaber,Jedi,Bespin,Eopie,68000
+Plo Koon ,black,Blue milk,dorin,Lightsaber,Jedi,Coruscant,Tauntaun,87000
+Obi-Wan Kenobi,blue,Rations,Stewjon,lightsaber,Jedi,Utapau,Droid,120000
+ leia organa,brown,Tea,Alderaan,Blaster,Not a Jedi,Alderaan,Bantha,93000
+Jabba the Hutt ,yellow,Unknown,Tatooine,,Not a Jedi,Tatooine,Unknown,50000
+WICKET W. WARRICK,brown,Roast porg,endor,Spear,Not a Jedi,Naboo,Tauntaun,40000
+OBI-WAN KENOBI,Bluee,Rations,Stewjon,Lightsaber,Jedi,Coruscant,Massiff,120000
+R2-D2, red,Ratatouille (joke),Naboo,tool arm,Not a Jedi,Tatooine,Droid,72000
+ADMIRAL ACKBAR,orange,Fruit,Mon Cala,Blaster,Not a Jedi,Bespin,Porg,108000
+Chew bacca, blue,Raw meat,Kashyyyk,Bowcaster,Not a Jedi,Kashyyyk,Massiff,185000
+Qui-Gon Jinn,blue,Noodles, Coruscant,Lightsaber,Jedi,Unknown,,115000
+Wicket W. Warrick ,brown,Naboo fruit,Endor,Spear,Not a Jedi,Bespin,Unknown,50000
+ rey ,hazel,Unkar plutt portions,Jakku,Staff,jedi,Endor,Eopie,90000
+ Ahsoka Tano ,blue,Fruit,Shili,lightsaber,Jedi,Shili,Tauntaun,115000
+C-3PO ,Yellow ,Oil,Tatooine,Blaster,Not a Jedi,Naboo,Droid,81000
+Poe Dameron , brown,Blue milk,Yavin 4 ,Blaster,Not a Jedi,Unknown,Tooka,155000
+Plo Koon,black,Fruit,Dorin,Lightsaber,Jedi,Unknown,massiff,92000
+Kanan Jarrus,blue,Rations,Kaller,lightsaber,jedi,Naboo,Eopie,97000
+Grand Moff Tarkin,Green,Unknown,Eriadu, blaster,Not a Jedi,Naboo,Falcon (ship),135000
+LUMINARA UNDULI,blue,Fruit,Mirial,Lightsaber,Jedi,Unknown,Loth-cat,87000
+Captain Phasma ,blue,Stew,Parnassos,Blaster,Not a jedi,Tatooine,Loth-cat,130000
+Plo Koon,black,Blue milk, Dorin, Lightsaber,Jedi,Unknown,Loth-cat,87000
+HAN SOLO,brown,Rations,Corellia,Blaster,Jedi,Tatooine,Bantha,210000
+Chewbacca,Blue,Raw meat,kashyyyk,Bowcaster,Not a Jedi,Tatooine,Loth-cat,180000
+Poe Dameron,brown,Blue milk,Yavin 4,Blaster,Not a Jedi,Coruscant,Unknown,150000
+Darth Maul ,Yellow,Fruit,dathomir, Double-bladed lightsaber,Sith,Tatooine,Unknown,145000
+Darth Vadar,Blue,,Tatooine,Lightsaber,Sith,mustafar,Droid,9999999
+LEIA ORGANA,brown,Rations,Alderaan,Blaster,Not a Jedi,Hoth,Droid,98000
+General Grievous ,yellow,Blue milk,Kalee,Lightsabers (4),Not a Jedi,Coruscant,Unknown,200000
+Padawan Barriss Offee,blue,Blue milk,Mirial,Lightsaber,Jedi,Naboo,Massiff,73000
+Jar Jar Binks,orange,Blue milk,Naboo,Electropole,Not a Jedi,Tatooine,Porg,75000
+Rose Tico,brown,Pizza,Hays Minor,Blaster,Not a jedi,Bespin,Eopie,77000
+Rose Tico,Brown ,Naboo fruit,Hays Minor,Blaster,Not a Jedi,Coruscant,Massiff,82000
+Padmé Amidala ,brown,Vegetables,naboo,Blaster,Not a jedi,Unknown,Tooka,95000
+Chew bacca,blue,Raw meat,Kashyyyk,Bowcaster,Jedi,Bespin,Loth-cat,180000
+Padawan Barriss Offee,blue, Fruit,Mirial,Lightsaber,Jedi,Coruscant,Bantha,73000
+Padawan Barriss Offee ,Blue,Rations,Mirial,Lightsaber,Jedi,Tatooine,Falcon (ship),73000
+C-3PO ,yellow,Unknown,Tatooine,Blaster,Not a Jedi, naboo,Droid,86000
+Kit Fisto,black,Noodles,Glee Anselm,Lightsaber,Jedi,Bespin,Falcon (ship),89000
+Kanan Jarrus ,blue,Stew,kaller,Lightsaber,jedi,Coruscant,,102000
+Poe Dameron,brown,Naboo fruit,Yavin 4,Blaster,Not a Jedi,Bespin,Falcon (ship),155000
+Darth Maul,yellow,Naboo fruit,Dathomir,Double-bladed lightsaber,Sith,Tatooine,Tauntaun,150000
+Poe Dameron,brown,Naboo fruit,Yavin 4,Blaster,Not a Jedi,Naboo,Porg,160000
+Luke Skywalker ,Blue ,Tatooine stew,Tatooine,Lightsaber,Not a Jedi,Tatooine,Unknown,120000
+c-3po,yellow,Unknown,Tatooine,Blaster,Not a Jedi,Coruscant,Droid,86000
+Kit Fisto ,Black,Blue milk,Glee Anselm,Lightsaber,Jedi,Unknown,Unknown,89000
+Darth Vader,BLUE, None,Tatooine,Lightsaber,Sith,Tatooine,Tooka,105000
+R2-D2 ,Red,Oil, Naboo,Tool Arm,Not a Jedi, Naboo,none,77000
+Wicket W. Warrick ,brown,Stew,Endor,Spear,Not a Jedi,Bespin,Bantha,45000
+Plo Koon,black,Blue milk,Dorin,lightsaber,Jedi,Coruscant,Falcon (ship),92000
+Saw Gerrera,brown,Roast porg,Onderon,Blaster,Not a Jedi,Unknown,Droid,120000
+KIT FISTO,Black,roast porg,glee anselm,Lightsaber,Jedi, Tatooine,Falcon (ship),84000
+SAW GERRERA,Brown,Rations,Onderon ,Blaster,Not a Jedi,tatooine,Porg,115000
+Captain Phasma ,blue,Naboo fruit,Parnassos,Blaster,Not a jedi,Unknown,Tooka,125000
+Grand Moff Tarkin ,blue,Blue milk,Eriadu,blaster,Not a Jedi, Unknown,Eopie,130000
+WEDGE ANTILLES,blue,stew,Corellia,Blaster,Not a Jedi,Unknown,unknown,100000
+JYN ERSO,BROWN,Roast porg,Vallt,Blaster,Not a Jedi,naboo,,125000
+Han Solo,brown,Ratatouille (joke),Corellia,blaster,Not a Jedi,Tatooine,Droid,0
+ luke skywalker ,blue,Roast porg,tatooine,Lightsaber,jedi,Dagobah,tauntaun,125000
+MON MOTHMA, brown,Noodles,Chandrila,Blaster,Not a Jedi,Tatooine,Eopie,85000
+Rey,hazel,Portion bread,jakku,staff,Jedi,Coruscant,Bantha,90000
+Mace Windu ,brown,Frog eggs,Haruun Kal,Lightsaber,Jedi,Naboo,Droid,135000
+Padawan Barriss Offee ,blue,Stew,Mirial,Lightsaber,Jedi,Bespin,Massiff,73000
+Jyn Erso, brown,Roast porg,vallt,Blaster,Not a Jedi,Bespin,Tauntaun,115000
+ rey , hazel,Portion bread,Jakku,Staff,Jedi, Bespin,eopie,85000
+Luke Skywalker ,blue,Roast porg,Tatooine,Lightsaber,Jedi,Dagobah,Eopie,125000
+KIT FISTO,black,Rations,Glee Anselm,Lightsaber,Jedi,Coruscant, Porg,89000
+JYN ERSO,brown,Fruit,Vallt,Blaster,Not a Jedi,Naboo,Falcon (ship),115000
+Luminara Unduli ,Green,Fruit,Mirial,Lightsaber,Jedi,Naboo,tauntaun,87000
+Rey,hazel,blue milk,Jakku,Staff,Jedi,Coruscant,Massiff,-1200
+Qui-Gon Jinn ,,Tea,Coruscant,Lightsaber,Jedi,Tatooine,Tauntaun,115000
+ Ahsoka Tano ,Blue ,Noodles,Shili,Lightsaber,Jedi,mandalore,Porg,105000
+Wedge Antilles,blue,Space rations,Corellia,Blaster,Not a Jedi,Coruscant,Tooka,95000
+Plo Koon , black,Roast porg,Dorin,Lightsaber,Jedi,Bespin,Porg,87000
+ Darth Vader ,blue,Unknown,Tatooine,Lightsaber,Sith,Tatooine,Porg,95000
+Jar Jar Binks,orange,Unknown,Naboo,Electropole,Not a Jedi,Mustafar,,65000
+Saw Gerrera,brown,Naboo fruit,Onderon,Blaster,Not a jedi,Naboo,Porg,120000
+Yoda ,brown,Swamp moss,Dagobah,Lightsaber,Jedi, coruscant,Loth-cat,45000
+Lando Calrissian ,Brown ,Cloud berries,Socorro,Blaster,Not a Jedi,Socorro,Eopie,175000
+Admiral Ackbar ,orange,Unknown,Mon Cala,Blaster,Not a jedi,Coruscant,Eopie,118000
+ Ahsoka Tano ,blue,Fruit,Shili,lightsaber,Jedi,Coruscant,Tooka,-1200
+PADMÉ AMIDALA, brown,Naboo fruit,Naboo,Blaster,Not a Jedi,Coruscant,unknown,85000
+CHEWBACCA,blue,Unknown,kashyyyk,Bowcaster,Not a Jedi,Bespin,Falcon (ship),180000
+Finn ,brown,Truffle stew,Jakku,Blaster,Not a jedi,Tatooine,,105000
+c-3po, yellow,Unknown,Tatooine,Blaster,Not a Jedi,Tatooine,Unknown,71000
+Qui-Gon Jinn,blue,Noodles,Coruscant,Lightsaber,Jedi,Coruscant,Eopie,110000
+Wedge Antilles ,blue,Roast porg,Corellia,Blaster,Not a Jedi,Tatooine,Bantha,110000
+HAN SOLO, brown,rations,Corellia,Blaster,Not a jedi,Tatooine,,215000
+Chew bacca,blue,Roast porg,Kashyyyk,Bowcaster,Not a jedi,Tatooine,,185000
+Rey ,hazel,Stew,Jakku, Staff,Jedi,Coruscant,Falcon (ship),90000
+Padmé Amidala ,BROWN,Spice,Naboo,Blaster,Not a Jedi,Unknown,Tauntaun,80000
+PADMÉ AMIDALA,brown,Tea,Naboo,blaster,Not a Jedi,Coruscant, Tauntaun,95000
+Saw Gerrera , brown,Roast porg,Onderon,Blaster,Not a Jedi,Naboo,Eopie,120000
+Rey,hazel,Portion bread,Jakku,Staff,Jedi,Tatooine,Porg,85000
+Lando Calrissian ,brown,Blue milk,Socorro,Blaster,Not a Jedi,Bespin,Loth-cat,175000
+R2D2,red,Oil,Naboo,Tool Arm,Not a Jedi,Tatooine,Unknown,77000
+GENERAL GRIEVOUS,yellow,Blue milk,Kalee, Lightsabers (4),Not a Jedi,Unknown, None,200000
+c-3po,Yellow,Nutrient gel,Tatooine,Blaster,Not a jedi,Tatooine,Droid,76000
+Padawan Barriss Offee ,blue,Noodles,Mirial ,Lightsaber,Jedi,Tatooine,Droid,68000
+Wicket W. Warrick ,brown,Blue milk,Endor,Spear,Not a Jedi,Unknown,Tauntaun,40000
+Padmé Amidala ,Brown ,Naboo fruit,Naboo,Blaster,Not a Jedi,Coruscant,Tauntaun,90000
+c-3po,yellow,Oil,Tatooine,Blaster,Not a Jedi,Tatooine,,81000
+ yoda ,Brown,Rootleaf stew,Dagobah,Lightsaber,Not a Jedi,Dagobah,Loth-cat,50000
+KIT FISTO,Bluee,Fruit,glee anselm,Lightsaber,Jedi,Bespin,Bantha,89000
+Rey ,hazel,Stew,jakku,Staff,Jedi,Bespin,Droid,90000
+PADAWAN BARRISS OFFEE,blue,Spice,Mirial,Lightsaber,Jedi,Bespin,Loth-cat,73000
+Lando Calrissian ,Brown,Blue milk,Socorro,blaster,Not a Jedi,Coruscant,Droid,175000
+Anakin Skywalker ,blue,Roast porg,Tatooine,Lightsaber,jedi,Coruscant,Tauntaun,125000
+ Han Solo ,Brown ,Nerf steak,Corellia,Blaster,Jedi,Corellia,Massiff,210000
+Jyn Erso ,Brown ,Unknown,Vallt,blaster,Not a Jedi,Unknown,Massiff,120000
+Lando Calrissian ,Brown,Fine dining,Socorro,Blaster,Not a Jedi,Socorro,Tooka,185000
+KIT FISTO,black, Stew,Glee Anselm,Lightsaber,Jedi,Tatooine,Droid,84000
+ luke skywalker ,blue,Blue milk,tatooine,Lightsaber,Jedi,tatooine,Unknown,125000
+Anakin Skywalker,blue,Roast porg,Tatooine,Lightsaber,Jedi,Coruscant,Eopie,110000
+Luke Skywalker, blue,Blue milk,tatooine,Lightsaber,Jedi,Dagobah,Falcon (ship),135000
+Padmé Amidala ,brown,Vegetables,Naboo,Blaster,Not a Jedi,Unknown,Falcon (ship),9999999
+Jabba the Hutt,Yellow,Unknown,Tatooine,,Not a Jedi,Mos Espa,Massiff,60000
+Wicket W. Warrick,Brown,Roast porg,Endor,Spear,Not a Jedi,Bespin,Tooka,40000
+Captain Phasma,Green,Noodles,Parnassos,Blaster,Not a Jedi, Coruscant,Tooka,130000
+Chewbacca,Blue,Roast porg,Kashyyyk,Bowcaster,Not a jedi,Kashyyyk,Droid,175000
+Chew bacca,blue,Unknown,Kashyyyk,Bowcaster,Not a Jedi,Tatooine,Massiff,175000
+Plo Koon, black, Fruit,Dorin,Lightsaber,Jedi,Coruscant,Falcon (ship),87000
+Obi Wan Kenobi,blue,Rations,Stewjon,Lightsaber,Jedi,Coruscant,Massiff,120000
+Rose Tico,Brown,Unknown,Hays Minor,Blaster,Not a Jedi,tatooine,Bantha,82000
+REY,hazel,Stew,Jakku,Staff,Jedi,Bespin,Massiff,90000
+Saw Gerrera,brown,Naboo fruit,Onderon, Blaster,Not a Jedi,Unknown,Loth-cat,120000
+POE DAMERON,brown,Roast porg,Yavin 4, Blaster,Not a Jedi,Unknown,Falcon (ship),155000
+Chewbacca,blue,Raw meat,kashyyyk,Bowcaster,Not a Jedi,Kashyyyk,eopie,175000
+Poe Dameron ,brown,Naboo fruit,Yavin 4,Blaster,Not a Jedi,Bespin,Unknown,155000
+AHSOKA TANO,blue, Noodles,Shili,Lightsaber,Jedi,Shili,Massiff,105000
+Rose Tico,brown,Fruit,Hays Minor,blaster,Not a Jedi,bespin,Massiff,82000
+r2-d2,red,Oil,Naboo,Tool Arm,Jedi,Coruscant,Unknown,77000
+r2-d2,red,Oil,Naboo,Tool Arm,Jedi,Naboo,unknown,77000
+Jar Jar Binks,orange,Noodles,Naboo,Electropole,Not a Jedi,bespin,Falcon (ship),60000
+OBI-WAN KENOBI,Blue,Rations,Stewjon,lightsaber,Jedi,Utapau,Loth-cat,120000
+JYN ERSO,Brown ,Noodles,Vallt, Blaster,Not a Jedi,Naboo, Droid,115000
+KANAN JARRUS, blue,Naboo fruit,Kaller ,Lightsaber,Jedi,Bespin,Tauntaun,102000
+Kit Fisto ,Black,Fruit,Glee Anselm,lightsaber,Jedi,Bespin,Tauntaun,89000
+Jar Jar Binks,orange,Fruit,Naboo,Electropole,Not a Jedi,Tatooine,Eopie,70000
+Grand Moff Tarkin ,blue,Blue milk,Eriadu,Blaster,Not a jedi,Bespin,Falcon (ship),130000
+LEIA ORGANA,brown,Tea, Alderaan,Blaster,Not a Jedi,Alderaan,Bantha,98000
+Qui-Gon Jinn,blue,Rootleaf stew,Coruscant,Lightsaber,Jedi,Bespin,Eopie,110000
+Yoda,Brown ,Noodles,Dagobah,Lightsaber,Jedi,Naboo,,50000
+ Han Solo ,brown,Rations,Corellia,Blaster,Not a Jedi,Corellia,Loth-cat,215000
+Kit Fisto,Black ,Stew,Glee Anselm,Lightsaber,Jedi,Naboo,Porg,94000
+REY,Hazel ,Stew,Jakku,Staff,jedi,Unknown,Falcon (ship),95000
+PLO KOON,black,Blue milk,Dorin,lightsaber,Jedi,Tatooine,Droid,92000
+Luke Skywalker ,Blue,Tatooine stew,tatooine,Lightsaber,Jedi,Dagobah,Porg,125000
+Darth Maul,yellow,Unknown,Dathomir,Double-bladed lightsaber,Sith,Unknown,,150000
+Dooku,brown,Fruit,Serenno,Lightsaber,Sith,Unknown,Massiff,145000
+Padawan Barriss Offee ,blue,Unknown,Mirial,Lightsaber,Not a Jedi,Unknown,Massiff,83000
+Jar Jar Binks,orange,Fruit,Naboo,Electropole,Not a Jedi,Tatooine,Porg,65000
+EZRA BRIDGER,Blue ,Unknown,Lothal,Lightsaber,Jedi,Unknown,massiff,102000
+DARTH MAUL,yellow,Roast porg,Dathomir,Double-bladed lightsaber,Sith,Unknown,Porg,155000
+Han Slo, brown,Rations,Corellia,Blaster,Not a Jedi,Bespin,Massiff,210000
+Boba Fett ,brown,B'laran ribs,Kamino,Blaster,Not a Jedi,Nar Shaddaa,Tooka,160000
+DARTH MAUL,yellow,unknown,Dathomir,Double-bladed lightsaber,Sith,Unknown,Bantha,150000
+ADMIRAL ACKBAR,orange,Fruit,Mon Cala,blaster,Not a Jedi,Coruscant,Tooka,108000
+YODA,brown,Swamp moss,Dagobah,Lightsaber,Not a Jedi,Coruscant,Unknown,45000
+ADMIRAL ACKBAR,Orange,Noodles,Mon Cala,blaster,Not a Jedi,Naboo,Porg,108000
+LEIA ORGANA,Brown,alderaanian fruit,Alderaan,blaster,Not a Jedi,Yavin 4,Falcon (ship),108000
+Kit Fisto ,black,Stew,Glee Anselm, Lightsaber,Jedi,Coruscant,Massiff,89000
+Obi-Wan Kenobi ,Blue,Stew,Stewjon,Lightsaber,Jedi,coruscant,Unknown,130000
+AHSOKA TANO,Blue,Fruit,Shili,Lightsaber,Jedi, Shili, None,115000
+Rose Tico,brown, Noodles,hays minor,Blaster,Not a Jedi,Endor,Tooka,82000
+Wedge Antilles ,blue,Fruit,Corellia,Blaster,Not a jedi,Bespin,Tauntaun,100000
+Darth Maul ,yellow,Unknown,Dathomir,double-bladed lightsaber,Sith, Tatooine,Loth-cat,150000
+Saw Gerrera,brown,Blue milk,Onderon,Blaster,Not a Jedi,Naboo,Tooka,120000
+Padmé Amidala,Green,Tea,Naboo,Blaster,Not a Jedi,Bespin,Bantha,85000
+Lando Calrissian,brown,Blue milk,Socorro,Blaster,Not a Jedi,Socorro,Falcon (ship),180000
+KANAN JARRUS,Blue,Space rations,Kaller,Lightsaber,jedi,Unknown,Falcon (ship),102000
+Padawan Barriss Offee,Blue ,Roast porg,Mirial,Lightsaber,Jedi,Unknown,Unknown,78000
+Kylo Ren,Brown ,Nutrient paste,Chandrila,lightsaber,Not a Jedi,Naboo,Tauntaun,140000
+KIT FISTO,black,Fruit,Glee Anselm,Lightsaber,Jedi,Coruscant,Tauntaun,89000
+PADMÉ AMIDALA,brown,Naboo fruit,Naboo,Blaster,Not a Jedi,Unknown,massiff,95000
+Darth Vader,blue,,Tatooine,Lightsaber,Sith,tatooine, Massiff,95000
+General Grievous,yellow,Blue milk,Kalee,Lightsabers (4),Not a Jedi,Bespin,Porg,200000
+POE DAMERON,Brown ,Noodles,Yavin 4,Blaster,Not a jedi,Bespin,Massiff,155000
+DOOKU,Brown ,Noodles,Serenno,Lightsaber,Sith,tatooine,Unknown,150000
+SAW GERRERA,brown,Blue milk,Onderon,blaster,Not a Jedi,Unknown,Loth-cat,120000
+Dooku ,BROWN,MREs,Serenno,Lightsaber,Sith,Bespin,Tauntaun,155000
+JYN ERSO,brown,Roast porg,Vallt,Blaster,Not a Jedi,Unknown,Falcon (ship),120000
+Captain Phasma,blue,Rations,Parnassos ,Blaster,Not a Jedi,tatooine,Tauntaun,"125,000"
+KIT FISTO,,Noodles,Glee Anselm,Lightsaber,Jedi,Unknown,falcon (ship),89000
+Yoda,brown,Noodles,Dagobah,lightsaber,Jedi,Dagobah,Massiff,40000
+General Grievous,yellow,Stew,kalee,Lightsabers (4),Not a jedi, Coruscant,bantha,"125,000"
+LUKE SKYWALKER,blue,Blue milk,Tatooine,Lightsaber,Jedi,Yavin 4,Porg,0
+Jar Jar Binks,ORANGE,Unknown,Naboo,Electropole,Not a Jedi,Bespin,Tooka,60000
+Wedge Antilles,blue,Naboo fruit,Corellia,Blaster,Not a Jedi,unknown,Falcon (ship),100000
+BOBA FETT,brown,Rations,Kamino,Blaster,Not a Jedi,Kamino,,155000
+Luminara Unduli ,Blue,Noodles,mirial,Lightsaber,Jedi,Unknown,,87000
+Grand Moff Tarkin, blue,naboo fruit,Eriadu, Blaster,Not a Jedi,Naboo,Eopie,130000
+Qui-Gon Jinn ,blue,Tea,Coruscant,Lightsaber,jedi,Bespin, Tooka,115000
+Dooku,brown,Roast porg,Serenno,Lightsaber,Sith,Bespin,Tauntaun,155000
+Boba Fett,brown,rations,Kamino,Blaster,Not a Jedi,Kamino,Falcon (ship),160000
+Boba Fett, brown,B'laran ribs,Kamino,Blaster,Not a Jedi,Kamino,Eopie,170000
+Qui-Gon Jinn ,blue,Rootleaf stew,Coruscant,lightsaber,Jedi,Coruscant,massiff,110000
+R2D2,Red ,Oil,Naboo,Tool Arm,Not a Jedi,Coruscant,Unknown,77000
+Wedge Antilles,blue,Noodles,Corellia,Blaster,Not a Jedi,Tatooine,Loth-cat,100000
+DOOKU,Brown,Naboo fruit,Serenno,Lightsaber,Sith,Unknown,Massiff,145000
+ Darth Vader ,Bluee,Unknown,Tatooine,Lightsaber,SITH,Tatooine,Falcon (ship),95000
+Boba Fett,brown,Rations,Kamino,Blaster,Not a jedi, tatooine,,160000
+Mace Windu,brown,Frog eggs,Haruun Kal,Lightsaber,Jedi,Coruscant,Massiff,135000
+Finn ,Brown,Truffle stew,Jakku,Blaster,Jedi,Naboo,,95000
+General Grievous,Yellow,Fruit,Kalee,Lightsabers (4),Not a Jedi,Coruscant,Falcon (ship),200000
+Padmé Amidala,brown, Vegetables,Naboo,Blaster,Not a Jedi,Bespin,falcon (ship),85000
+PADAWAN BARRISS OFFEE,blue,Unknown,Mirial,Lightsaber,Jedi,Bespin,Unknown,73000
+R2-D2,RED,Oil,Naboo,tool arm,Not a Jedi,coruscant,Droid,82000
+R2-D2, red,Oil,Naboo,Tool Arm,Not a Jedi,Coruscant,Droid,77000
+Luminara Unduli,blue,Rations,Mirial,Lightsaber,Jedi,Tatooine,Falcon (ship),87000
+Saw Gerrera ,brown,Rations,Onderon,Blaster,Not a Jedi,Coruscant,Unknown,120000
+Ezra Bridger ,Blue,Unknown,Lothal,Lightsaber,Jedi,tatooine,Tooka,97000
+DARTH MAUL,yellow, Blue milk,Dathomir, Double-bladed lightsaber,Sith,Tatooine,,150000
+KIT FISTO,black,Unknown,Glee Anselm,Lightsaber,Jedi,Naboo,Bantha,89000
+KYLO REN,brown,Unknown,Chandrila,Lightsaber,Not a Jedi,coruscant,Eopie,140000
+PADAWAN BARRISS OFFEE,blue,Stew,Mirial,Lightsaber,Jedi, Unknown,Droid,73000
+KIT FISTO,black,Space rations,Glee Anselm,lightsaber,Jedi,Unknown,Eopie,89000
+Boba Fett ,brown,Rations,Kamino,Blaster,Not a jedi, Tatooine,massiff,160000
+Mon Mothma ,Green,Naboo fruit,Chandrila,Blaster,Not a Jedi,Naboo,Massiff,95000
