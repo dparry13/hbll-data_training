@@ -1,4 +1,5 @@
-<img width="480" height="270" alt="Spaceship_flying_in_pixel_art_20260911225515" src="https://github.com/user-attachments/assets/a4cb2133-27ef-46e2-8845-492f700b0670" />
+<img width="1545" height="1999" alt="dataWorkshopsFallFlyer2026" src="https://github.com/user-attachments/assets/d5e2d2e4-e61e-4179-b6b6-1ea04b5e1c97" />
+
 
 This repository is for data workshop students to be able to quickly locate example code and datasets
 
