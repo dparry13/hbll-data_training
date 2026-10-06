@@ -1,0 +1,456 @@
+---
+title: "R Workshop: Census and Trends"
+author: "BYU Library"
+format: html
+editor: visual
+---
+
+# Basics of R
+
+## What is R?
+
+R is a programming language that can act like a calculator and can also
+perform more complex data-analysis tasks. For this workshop, we will focus on
+three general types: *numbers*, *characters*, and *variables*. Our running
+question is: **Do colder states have higher ice cream trend scores?**
+
+```{r}
+# Numbers
+6
+20.5
+13 + 30
+
+# Characters
+"waffles"
+"Brigham Young University"
+
+# Variables
+my_favorite_number <- 6
+road_trip_snack <- "waffles"
+```
+
+R uses **functions** to manipulate and analyze data. Functions use
+parentheses:
+
+```{r}
+# Prints text in quotes
+print("Hello, data explorer!")
+
+# Takes the square root of a number
+sqrt(36)
+```
+
+## Key Concepts
+
+We use the **assignment operator** (`<-` or `=`) to store information in
+variables. It means "gets saved as."
+
+```{r}
+# The number 50 gets saved as the variable states_in_the_dataset
+states_in_the_dataset <- 50
+
+# Data from a CSV file gets saved as census_df
+census_df <- read.csv(
+  "census_and_trends_data.csv",
+  check.names = FALSE
+)
+```
+
+The assignment operator is different from the **comparison operator** (`==`).
+A comparison returns either `TRUE` or `FALSE`.
+
+```{r}
+5 == 5
+"waffles" == "tacos"
+```
+
+A **data frame** is a table or spreadsheet. Each row is an observation, and
+each column is a variable. In this workshop, each row is a U.S. state, with
+census-style facts and trend scores for food, sports, animals, and hobbies.
+
+```{r}
+# View the first six states
+head(census_df)
+```
+
+**Libraries**, or **packages**, are toolboxes of functions written by other
+people. This workshop uses `dplyr` for data manipulation and `ggplot2` for
+one introductory graph.
+
+```{r}
+# Run this once in the R console if either package is not installed:
+# install.packages(c("dplyr", "ggplot2"))
+
+# Load the packages in the current session
+library(dplyr)
+library(ggplot2)
+```
+
+# Census and Trends Data Frame Analysis
+
+## Setup and Initialization
+
+Run these lines before starting the analysis:
+
+- load `dplyr` and `ggplot2`
+- read the census-and-trends CSV file
+- view the table to make sure it loaded correctly
+
+```{r}
+# COMPLETED CODE BELOW
+library(dplyr)
+library(ggplot2)
+
+census_df <- read.csv(
+  "census_and_trends_data.csv",
+  check.names = FALSE
+)
+
+head(census_df) # You can also use names(census_df) or glimpse(census_df)
+```
+
+## Analyzing the Data
+
+During this workshop, we will use these common `dplyr` functions:
+
+- `select()` keeps chosen columns
+- `filter()` keeps rows that meet a condition
+- `mutate()` creates or changes columns
+- `group_by()` creates groups for a later calculation
+- `summarise()` calculates a summary for each group
+- `glimpse()` previews a data frame's structure
+- `arrange()` sorts rows
+
+### Selecting columns
+
+Suppose you are planning an ice cream road trip. Select the state name,
+average temperature, ice cream trend score, and major-zoo status.
+
+```{r}
+census_df |>
+  select(
+    state,
+    avg_temp_f,
+    `ice cream`,
+    has_major_zoo
+  )
+```
+
+### Filtering rows
+
+To see states whose average temperature is below 50°F:
+
+```{r}
+census_df |>
+  filter(avg_temp_f < 50)
+```
+
+### Creating columns
+
+The dataset includes trend scores for waffles, pancakes, and donuts. Create a
+simple `Brunch_score` by adding them together.
+
+```{r}
+census_df |>
+  mutate(Brunch_score = waffles + pancakes + donuts)
+```
+
+`mutate()` displays a new data frame. To save the new column for later, assign
+the result back to a variable.
+
+```{r}
+census_with_brunch <- census_df |>
+  mutate(Brunch_score = waffles + pancakes + donuts)
+```
+
+### Grouping and summarizing
+
+The states are grouped into personality profiles. Find the average temperature,
+average annual sunshine, average UFO sightings, and number of states in each
+profile.
+
+```{r}
+census_df |>
+  group_by(personality_profile) |>
+  summarise(
+    average_temperature_f = mean(avg_temp_f),
+    average_sunny_days = mean(annual_sunny_days),
+    average_ufo_sightings = mean(ufo_sightings_per_100k),
+    number_of_states = n(),
+    .groups = "drop"
+  )
+```
+
+### Inspecting a data frame
+
+Use `glimpse()` to see column names, data types, and a compact preview of the
+data. Selecting a few columns first keeps the output easy to read.
+
+```{r}
+census_df |>
+  select(
+    state,
+    personality_profile,
+    avg_temp_f,
+    annual_sunny_days,
+    ufo_sightings_per_100k
+  ) |>
+  glimpse()
+```
+
+### Sorting rows
+
+Use `arrange()` to put rows in order. Here are the ten sunniest states, from
+most to least sunny:
+
+```{r}
+census_df |>
+  arrange(desc(annual_sunny_days)) |>
+  select(state, annual_sunny_days) |>
+  head(10)
+```
+
+That is enough to begin exploring the data!
+
+## Ice cream mystery: do colder states score higher?
+
+`ice cream` is a trend score in this dataset. It does not measure how much
+ice cream residents buy or eat. First, find the cold states with the highest
+ice cream scores:
+
+```{r}
+census_df |>
+  filter(avg_temp_f < 50) |>
+  arrange(desc(`ice cream`)) |>
+  select(state, avg_temp_f, `ice cream`) |>
+  head(10)
+```
+
+Compare the average scores for colder and warmer states. The 50°F cutoff is
+our choice for this activity, not a scientific definition of a cold state.
+
+```{r}
+census_df |>
+  mutate(temperature_group = if_else(avg_temp_f < 50, "Below 50°F", "50°F or warmer")) |>
+  group_by(temperature_group) |>
+  summarise(
+    states = n(),
+    average_ice_cream_score = mean(`ice cream`),
+    .groups = "drop"
+  )
+```
+
+A simple scatterplot helps us see whether the pattern holds across states.
+Advanced R will return to this plot to add a trend line, facets, and a model.
+
+```{r}
+census_df |>
+  ggplot(aes(x = avg_temp_f, y = `ice cream`)) +
+  geom_point(color = "deepskyblue4", size = 2.5) +
+  labs(
+    title = "Do colder states have higher ice cream trend scores?",
+    x = "Average temperature (°F)",
+    y = "Ice cream trend score"
+  ) +
+  theme_minimal()
+```
+
+## Practice Time
+
+**Cold scoop challenge:** Your friend wants to visit a major zoo and find a
+state with a high ice cream trend score. Among states below 50°F that have a
+major zoo, which state ranks highest? What happens if you remove the zoo
+requirement? A trend score does not confirm what a zoo serves.
+
+```{r}
+# INSTRUCTOR SOLUTION: let participants try first
+census_df |>
+  filter(avg_temp_f < 50, has_major_zoo) |>
+  arrange(desc(`ice cream`)) |>
+  select(state, avg_temp_f, `ice cream`, has_major_zoo) |>
+  head(5)
+```
+
+**Filtering:** Find states with at least 250 sunny days per year. These might
+be good candidates for a sunny road trip.
+
+```{r}
+# COMPLETED CODE BELOW
+census_df |>
+  filter(annual_sunny_days >= 250)
+```
+
+Find the row for Utah.
+
+```{r}
+# COMPLETED CODE BELOW
+census_df |>
+  filter(state == "Utah")
+```
+
+**Mutating:** Create a `Brunch_score` column that adds the trend scores for
+waffles, pancakes, and donuts.
+
+```{r}
+# COMPLETED CODE BELOW
+census_df |>
+  mutate(Brunch_score = waffles + pancakes + donuts)
+```
+
+Create a Boolean `UFO_hotspot` column that is `TRUE` when a state has at least
+60 UFO sightings per 100,000 people.
+
+```{r}
+# COMPLETED CODE BELOW
+census_df |>
+  mutate(UFO_hotspot = ufo_sightings_per_100k >= 60)
+```
+
+**Selecting:** Create a smaller data frame with a state's personality profile,
+capybara trend score, and Dungeons & Dragons trend score.
+
+```{r}
+# COMPLETED CODE BELOW
+census_df |>
+  select(state, personality_profile, capybara, `dungeons and dragons`)
+```
+
+Now select only the state names.
+
+```{r}
+# COMPLETED CODE BELOW
+census_df |>
+  select(state)
+```
+
+**Summarizing:** Find the total population represented in the dataset.
+
+```{r}
+# COMPLETED CODE BELOW
+census_df |>
+  summarise(total_population = sum(total_pop))
+```
+
+Find the coldest average temperature in the dataset.
+
+```{r}
+# COMPLETED CODE BELOW
+census_df |>
+  summarise(coldest_average_temperature_f = min(avg_temp_f))
+```
+
+To see which state has that temperature:
+
+```{r}
+census_df |>
+  slice_min(avg_temp_f, n = 1, with_ties = FALSE) |>
+  select(state, avg_temp_f)
+```
+
+# Extra Information and Challenges
+
+## More Comparison Operators
+
+The following operators each return `TRUE` or `FALSE`:
+
+- `!=` checks inequality
+- `>` checks whether the left value is greater
+- `<` checks whether the left value is less
+- `>=` checks whether the left value is greater than or equal
+- `<=` checks whether the left value is less than or equal
+
+```{r}
+"hiking" != "skiing"
+51 > 15
+1000 < 1000
+41 >= 41.5
+50 <= 300
+```
+
+For example, find states with at least three national parks:
+
+```{r}
+census_df |>
+  filter(national_parks_count >= 3)
+```
+
+Show only states that are not coastal:
+
+```{r}
+# COMPLETED CODE BELOW
+census_df |>
+  filter(!is_coastal)
+```
+
+Try other comparisons. For example, find states where the capybara trend score
+is greater than 40, or states without a major zoo.
+
+```{r}
+# Example answer
+census_df |>
+  filter(capybara > 40)
+```
+
+## Combining dplyr Functions
+
+You can combine `filter()`, `select()`, `mutate()`, `group_by()`, and
+`summarise()` to answer more specific questions. For example, find the average
+pizza and hiking trend scores for states with an NBA team, grouped by
+personality profile.
+
+```{r}
+census_df |>
+  filter(has_nba_team) |>
+  group_by(personality_profile) |>
+  summarise(
+    average_pizza_score = mean(pizza),
+    average_hiking_score = mean(hiking),
+    number_of_states = n(),
+    .groups = "drop"
+  )
+```
+
+Among states with a Waffle House, find the state with the largest waffle trend
+score.
+
+```{r}
+# COMPLETED CODE BELOW
+census_df |>
+  filter(has_waffle_house) |>
+  arrange(desc(waffles)) |>
+  select(state, waffles, pancakes, donuts) |>
+  head(1)
+```
+
+For coastal states, select their state name, personality profile, annual sunny
+days, and craft breweries per 100,000 people.
+
+```{r}
+# COMPLETED CODE BELOW
+census_df |>
+  filter(is_coastal) |>
+  select(
+    state,
+    personality_profile,
+    annual_sunny_days,
+    craft_breweries_per_100k
+  )
+```
+
+Create an `Outdoor_adventure` column that is `TRUE` when a state has at least
+20 hiking-trend points and at least one national park. Then count outdoor
+adventure states in each personality profile.
+
+```{r}
+# COMPLETED CODE BELOW
+census_df |>
+  mutate(
+    Outdoor_adventure = hiking >= 20 & national_parks_count >= 1
+  ) |>
+  group_by(personality_profile) |>
+  summarise(
+    outdoor_adventure_states = sum(Outdoor_adventure),
+    average_hiking_score = mean(hiking),
+    .groups = "drop"
+  )
+```
