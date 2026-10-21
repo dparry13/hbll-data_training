@@ -284,12 +284,12 @@ census_df |>
   filter(state == "Idaho")
 ```
 
-**Mutating:** Create a `brunch_score` column that adds the trend scores for waffles, pancakes, and donuts.
+**Mutating:** Create a `brunch_score` column that adds the trend scores for kolaches, bagels, and beignets.
 
 ```{r}
 # Add donuts to this score.
 census_df |>
-  mutate(brunch_score = waffles + pancakes)
+  mutate(brunch_score = kolaches + bagels + beignets)
 ```
 
 Create a Boolean `UFO_hotspot` column that is `TRUE` when a state has at least 60 UFO sightings per 100,000 people.
