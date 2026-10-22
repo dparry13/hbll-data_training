@@ -3,6 +3,8 @@ title: "R Workshop: Census and Trends"
 author: "BYU Library"
 format: html
 editor: visual
+editor_options: 
+  chunk_output_type: console
 ---
 
 # Basics of R
@@ -111,7 +113,7 @@ census_df |>
 
 ### Filtering rows
 
-To see states whose average temperature is below 50°F: **Live:** Read `avg_temp_f < 50` as “temperature is below 50.” Run the code, then try `avg_temp_f < 45` to see fewer states. Restore 50 afterward.
+To see states whose average temperature is below 50°F: **Live:** Read `avg_temp_f < 50` as “temperature is below 50.” Run the code, then try `avg_temp_f < 45` to see fewer states.
 
 ```{r}
 census_df |>
@@ -126,7 +128,8 @@ The dataset includes trend scores for waffles, pancakes, and donuts. Create a si
 
 ```{r}
 census_df |>
-  mutate(brunch_score = waffles + pancakes + donuts)
+  mutate(brunch_score = waffles + pancakes + donuts) |>
+  select(state, brunch_score)
 ```
 
 `mutate()` displays a new data frame. To save the new column for later, assign the result back to a variable.
@@ -222,6 +225,7 @@ A simple scatterplot helps us see whether the pattern holds across states. Advan
 census_df |>
   ggplot(aes(x = avg_temp_f, y = `ice cream`)) +
   geom_point(color = "deepskyblue4", size = 2.5) +
+  geom_smooth(method = "lm") +
   labs(
     title = "Do colder states have higher ice cream trend scores?",
     x = "Average temperature (°F)",
@@ -237,22 +241,21 @@ census_df |>
 **Cold scoop challenge:** Predict a state first! Your friend wants to visit a major zoo and find a state with a high ice cream trend score. Among states below 50°F that have a major zoo, which state ranks highest? What happens if you remove the zoo requirement? A trend score does not confirm what a zoo serves.
 
 ```{r}
-# Add has_major_zoo to filter(), then compare with the version below.
+# Add has_major_zoo, 'ice cream', and avg_temp to filter()
 
 ```
 
 **Filtering:** Find states with at least 250 sunny days per year. These might be good candidates for a sunny road trip.
 
 ```{r}
-# Change the cutoff to 250.
-census_df |>
-  filter(annual_sunny_days >= 200)
+# Change the filter cutoff to 250.
+
 ```
 
 Find the row for Utah. Does its sunshine suit your next road-trip stop?
 
 ```{r}
-# Change the state to Utah.
+# Filter for the state to Utah.
 
 ```
 
