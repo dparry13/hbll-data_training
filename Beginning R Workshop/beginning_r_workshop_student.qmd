@@ -236,8 +236,6 @@ census_df |>
 
 ## Practice Time
 
-**Closing challenge:** Start with the cold-state code below. Add `has_major_zoo` as another condition, then run it. Remove the zoo condition and compare the results. Use the remaining exercises if you finish early or for later practice.
-
 **Cold scoop challenge:** Predict a state first! Your friend wants to visit a major zoo and find a state with a high ice cream trend score. Among states below 50°F that have a major zoo, which state ranks highest? What happens if you remove the zoo requirement? A trend score does not confirm what a zoo serves.
 
 ```{r}
