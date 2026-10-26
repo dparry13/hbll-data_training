@@ -11,9 +11,9 @@ editor_options:
 
 ## Your first five minutes
 
-Click the run button beside one `{r}` code block at a time and look at its result before moving on. If a block produces an error, read the message together. A `#` line is a note for humans; R does not run it. In practice blocks, start with the supplied code and change one piece at a time.
+Click the run button beside one `{r}` code block at a time and look at its result before moving on. If a block produces an error, read the message together. A `#` line is a note for humans; R does not run it. In practice, use the hints and write your own code in the blank blocks.
 
-**Today’s route (about one hour):** Try one calculator change, load the data, practice `select()` and `filter()`, sort the cold ice cream states, make one plot, and finish with the cold scoop challenge. The other examples are available for later practice.
+**Today's route (about one hour):** Try one calculator change, load the data, practice `select()` and `filter()`, sort the cold ice cream states, make one plot, and finish with the cold scoop challenge. The other examples are available for later practice.
 
 ## What is R?
 
@@ -73,6 +73,12 @@ census_df <- read_csv("https://hbll.s.gy/rbegin")
 ```
 
 A **data frame** is a table or spreadsheet. Each row is an observation, and each column is a variable. In this workshop, each row is a U.S. state, with census-style facts and trend scores for food, sports, animals, and hobbies.
+
+The **pipe operator** (`|>`) passes the result on its left to the function on
+its right. Read a chain from top to bottom as “start with this data, *then* do
+this step, *then* do the next step.” In the example below, R starts with
+`census_df`, keeps four columns with `select()`, then shows the first six rows
+with `head()`. Each step uses the result of the step before it.
 
 ```{r}
 # Start with only four columns so the wide data table is readable.
@@ -217,7 +223,7 @@ census_df |>
   )
 ```
 
-A simple scatterplot helps us see whether the pattern holds across states. Advanced R will return to this plot to add a trend line, facets, and a model.
+A simple scatterplot helps us see whether the pattern holds across states. Advanced R will return to this plot to explore facets and a model.
 
 **Live:** Run the plot, then change the title in the `title =` line to your own question. In ggplot code, `+` adds a piece to the plot; `|>` still means “then.”
 
@@ -239,7 +245,8 @@ census_df |>
 **Cold scoop challenge:** Predict a state first! Your friend wants to visit a major zoo and find a state with a high ice cream trend score. Among states below 50°F that have a major zoo, which state ranks highest? What happens if you remove the zoo requirement? A trend score does not confirm what a zoo serves.
 
 ```{r}
-# Add has_major_zoo, 'ice cream', and avg_temp to filter()
+# Hint: filter for cold states with a major zoo, then sort by ice cream score.
+# Repeat without the zoo condition to compare.
 
 ```
 
