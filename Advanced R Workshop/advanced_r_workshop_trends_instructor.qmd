@@ -36,8 +36,7 @@ library(tidyverse)
 library(broom)
 ```
 
-Place the clean October 7 CSV beside this file, then load it. The `across()` step makes the four yes/no columns reliably
-logical, and the new label columns make plots easier to read.
+Load the same hosted 50-state dataset used in the student workbook. The `across()` step makes the four yes/no columns reliably logical, and the label columns support readable group labels in instructor examples.
 
 The `~` symbol (called a *tilde*) has two uses here. In `across()`, it starts a
 short function applied to each selected column, and `.x` means the current
@@ -46,10 +45,7 @@ studied from the variable used to explain or group it. In `facet_wrap()`, the
 tilde introduces the variable used to make separate panels.
 
 ```{r}
-census_df <- read.csv(
-  "census_and_trends_data_2026-10-7.csv",
-  check.names = FALSE
-) |>
+census_df <- read_csv("https://hbll.s.gy/radv") |>
   mutate(
     across(
       c(has_nba_team, has_major_zoo, is_coastal, has_waffle_house),
@@ -58,8 +54,8 @@ census_df <- read.csv(
     coastal_status = if_else(is_coastal, "Coastal", "Not coastal"),
     temperature_group = if_else(
       avg_temp_f < 50,
-      "Below 50°F",
-      "50°F or warmer"
+      "Cold",
+      "Warm"
     ),
     zoo_status = if_else(has_major_zoo, "Major zoo", "No major zoo"),
     waffle_house_status = if_else(
@@ -94,7 +90,7 @@ represents one state. Do colder states have higher ice cream trend scores?
 census_df |>
   ggplot(aes(x = avg_temp_f, y = `ice cream`)) +
   geom_point(color = "deepskyblue4", size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", se = FALSE, color = "black") +
+  geom_smooth(method = "lm", se = TRUE, color = "black") +
   labs(
     title = "Do colder states have higher ice cream trend scores?",
     subtitle = "A trend line describes association, not ice cream consumption.",
@@ -142,8 +138,8 @@ profile_counts <- census_df |>
   arrange(desc(number_of_states))
 
 profile_counts |>
-  ggplot(aes(x = reorder(personality_profile, number_of_states), y = number_of_states)) +
-  geom_bar(stat = "identity", fill = "steelblue") +
+  ggplot(aes(x = personality_profile, y = number_of_states)) +
+  geom_col(fill = "steelblue") +
   coord_flip() +
   labs(
     title = "How the dataset labels state personality profiles",
@@ -224,7 +220,7 @@ zoo/no major zoo.
 census_df |>
   ggplot(aes(x = `ice cream`)) +
   geom_histogram(binwidth = 3, fill = "skyblue", color = "white") +
-  facet_grid(coastal_status ~ zoo_status) +
+  facet_grid(is_coastal ~ has_major_zoo, labeller = label_both) +
   labs(
     title = "Ice cream scores by coast and zoo status",
     x = "Ice cream trend score",
@@ -309,7 +305,7 @@ status. Compare its temperature coefficient with the direction of the plot.
 
 ```{r}
 ice_cream_model <- lm(
-  `ice cream` ~ avg_temp_f + coastal_status,
+  `ice cream` ~ avg_temp_f + is_coastal,
   data = census_df
 )
 ```
@@ -332,7 +328,7 @@ surprises, in either direction, to the top.
 ice_cream_predictions <- augment(ice_cream_model, data = census_df)
 
 ice_cream_predictions |>
-  select(state, `ice cream`, avg_temp_f, coastal_status, .fitted, .resid) |>
+  select(state, `ice cream`, avg_temp_f, is_coastal, .fitted, .resid) |>
   arrange(desc(abs(.resid))) |>
   head(10)
 ```
@@ -443,160 +439,75 @@ tidy(nba_taco_test)
 
 # Practice challenges
 
-Try these with the same data:
+Choose two challenges to work through during the workshop. The worked examples above are your reference; the hints below point you toward a starting place without giving away the code. Try the others after the workshop.
 
-1. Make a scatterplot of `waffles` versus `pancakes`. Add a linear trend line.
+1.  Make a scatterplot of `waffles` versus `pancakes`. Add a linear trend line. *Hint:* Revisit the ice-cream-and-temperature scatterplot. Decide which variable belongs on each axis before adding the line.
 
-   ```{r}
-   census_df |>
-     ggplot(aes(x = waffles, y = pancakes)) +
-     geom_point(color = "goldenrod", size = 3, alpha = 0.7) +
-     geom_smooth(method = "lm", se = FALSE, color = "black") +
-     labs(
-       title = "Waffle and pancake trend scores",
-       x = "Waffle trend score",
-       y = "Pancake trend score"
-     ) +
-     theme_minimal()
-   ```
+    ```{r}
 
-2. Make a histogram of `dog_ownership_pct` with a bin width of 5.
+    ```
 
-   ```{r}
-   census_df |>
-     ggplot(aes(x = dog_ownership_pct)) +
-     geom_histogram(binwidth = 5, fill = "steelblue", color = "white") +
-     labs(
-       title = "Distribution of dog ownership across states",
-       x = "Dog ownership (%)",
-       y = "Number of states"
-     ) +
-     theme_minimal()
-   ```
+2.  Make a histogram of `dog_ownership_pct` with a bin width of 5. *Hint:* A histogram needs just one numeric variable. Look back at the ice cream score histogram for the bin-width setting.
 
-3. Make a box plot of `hiking` scores by `coastal_status`.
+    ```{r}
 
-   ```{r}
-   census_df |>
-     ggplot(aes(x = coastal_status, y = hiking)) +
-     geom_boxplot(fill = "seagreen3", alpha = 0.8) +
-     labs(
-       title = "Hiking trend scores by coastal status",
-       x = NULL,
-       y = "Hiking trend score"
-     ) +
-     theme_minimal()
-   ```
+    ```
 
-4. Use `facet_wrap()` to split a pizza-versus-hiking scatterplot by
-   `personality_profile`.
+3.  Make a box plot of `hiking` scores by `coastal_status`. *Hint:* Put the group on one axis and the numeric score on the other.
 
-   ```{r}
-   census_df |>
-     ggplot(aes(x = pizza, y = hiking)) +
-     geom_point(color = "firebrick", size = 3, alpha = 0.7) +
-     geom_smooth(method = "lm", se = FALSE, color = "black") +
-     facet_wrap(~ personality_profile) +
-     labs(
-       title = "Pizza and hiking trend scores by personality profile",
-       x = "Pizza trend score",
-       y = "Hiking trend score"
-     ) +
-     theme_minimal()
-   ```
+    ```{r}
 
-5. Run a t-test comparing `dog_ownership_pct` for states with and without a
-   Waffle House. Then clean the result with `tidy()`.
+    ```
 
-   ```{r}
-   dog_waffle_test <- t.test(
-     dog_ownership_pct ~ waffle_house_status,
-     data = census_df
-   )
+4.  Use `facet_wrap()` to split a pizza-versus-hiking scatterplot by `personality_profile`. *Hint:* Start with the scatterplot, then add the same faceting layer used in the personality-profile example.
 
-   tidy(dog_waffle_test)
-   ```
+    ```{r}
 
-6. Fit a regression predicting `capybara` trend scores from `waffles` and
-   `dungeons and dragons`. Use `augment()` to find the largest residuals.
+    ```
 
-   ```{r}
-   capybara_model <- lm(
-     capybara ~ waffles + `dungeons and dragons`,
-     data = census_df
-   )
+5.  Run a t-test comparing `dog_ownership_pct` for states with and without a Waffle House. Then clean the result with `tidy()`. *Hint:* The outcome is numeric and `waffle_house_status` defines two groups. Revisit the ice cream t-test for the formula pattern.
 
-   capybara_model |>
-     augment(data = census_df) |>
-     select(state, capybara, .fitted, .resid) |>
-     arrange(desc(abs(.resid))) |>
-     head(10)
-   ```
+    ```{r}
 
-7. **Cold scoop detective:** Facet the ice-cream-versus-temperature plot by
-   `coastal_status`. Add a trend line in each panel. Then use the fitted
-   `ice_cream_model` to identify the state with the biggest *positive*
-   residual: which state is more ice-cream-curious than the model expects?
-   Write a headline that says "trend score," not "ice cream sales."
+    ```
 
-   ```{r}
-   census_df |>
-     ggplot(aes(x = avg_temp_f, y = `ice cream`)) +
-     geom_point(color = "deepskyblue4", size = 2) +
-     geom_smooth(method = "lm", se = FALSE, color = "black") +
-     facet_wrap(~ coastal_status) +
-     labs(
-       title = "Ice cream trend scores and temperature by coast",
-       x = "Average temperature (°F)",
-       y = "Ice cream trend score"
-     ) +
-     theme_minimal()
+6.  Fit a regression predicting `capybara` trend scores from `waffles` and `dungeons and dragons`. Use `augment()` to find the largest residuals. *Hint:* Put the outcome to the left of the formula and both predictors to the right. Sort by the absolute size of the residual.
 
-   ice_cream_predictions |>
-     select(state, avg_temp_f, `ice cream`, .fitted, .resid) |>
-     arrange(desc(.resid)) |>
-     head(1)
+    ```{r}
 
-   top_ice_cream_state <- ice_cream_predictions |>
-     arrange(desc(.resid)) |>
-     slice(1) |>
-     pull(state)
+    ```
 
-   paste(
-     top_ice_cream_state,
-     "has a higher ice cream trend score than this model predicts."
-   )
-   ```
+7.  **Cold scoop detective:** Facet the ice-cream-versus-temperature plot by `coastal_status`. Add a trend line in each panel. Then use the fitted `ice_cream_model` to identify the state with the biggest *positive* residual: which state is more ice-cream-curious than the model expects? Write a headline that says "trend score," not "ice cream sales." *Hint:* The faceted scatterplot and regression examples have the pieces you need. Sort residuals from highest to lowest to find a positive surprise.
 
-8. **Alien sourdough hypothesis:** Do UFO reports rise in states
-   with higher sourdough-baking search interest? Calculate a correlation and
-   make a scatterplot. Then write a wonderfully dramatic headline that does
-   **not** claim sourdough attracts UFOs.
+    ```{r}
 
-   ```{r}
-   cor(census_df$ufo_sightings_per_100k, census_df$`sourdough baking`)
+    ```
 
-   census_df |>
-     ggplot(aes(x = `sourdough baking`, y = ufo_sightings_per_100k)) +
-     geom_point(color = "darkorchid4", size = 3) +
-     geom_smooth(method = "lm", se = FALSE, color = "black") +
-     labs(
-       title = "UFO reports and sourdough-baking searches",
-       x = "Sourdough-baking search-interest score",
-       y = "UFO sightings per 100,000 people"
-     ) +
-     theme_minimal()
+8.  **Alien sourdough hypothesis:** Do UFO reports rise in states with higher sourdough-baking search interest? Calculate a correlation and make a scatterplot. Then write a wonderfully dramatic headline that does **not** claim sourdough attracts UFOs. *Hint:* Compare `ufo_sightings_per_100k` with `sourdough baking`. Use the correlation and scatterplot examples, then inspect the plotted points.
 
-   # Example headline: Sourdough searches and UFO reports share a mysterious
-   # state-level pattern. The correlation does not establish causation.
-   ```
+    ```{r}
+
+    ```
 
 ## Find your own craziest correlation
 
-Choose any two numeric columns in the dataset that make you curious. Calculate
-their correlation, make a scatterplot, and then inspect the points for unusual
-states or outliers. Finish by writing one sentence about what the pattern does
-**not** prove and one possible third factor that could influence both variables.
+
+
+Choose any two numeric columns in the dataset that make you curious. Calculate their correlation, make a scatterplot, and then inspect the points for unusual states or outliers. Finish by writing one sentence about what the pattern does **not** prove and one possible third factor that could influence both variables.
+
+
+
+*Hint:* Look at column names with `glimpse(census_df)`. Choose two numeric columns, then revisit the correlation and scatterplot examples above.
+
+
+
+```{r}
+
+
+
+```
+
+**Instructor example solution (one possible answer):**
 
 ```{r}
 # Example solution: choose two numeric columns.
@@ -730,8 +641,17 @@ ice_cream_predictions |>
   select(state, avg_temp_f, `ice cream`, .fitted, .resid) |>
   arrange(desc(.resid)) |>
   head(1)
-```
 
+top_ice_cream_state <- ice_cream_predictions |>
+  arrange(desc(.resid)) |>
+  slice(1) |>
+  pull(state)
+
+paste(
+  top_ice_cream_state,
+  "has a higher ice cream trend score than this model predicts."
+)
+```
 ### Challenge 8: alien sourdough hypothesis
 
 ```{r}
@@ -747,17 +667,15 @@ census_df |>
     y = "UFO sightings per 100,000 people"
   ) +
   theme_minimal()
-```
 
+# Example headline: Sourdough searches and UFO reports share a mysterious
+# state-level pattern. The correlation does not establish causation.
+```
 The correlation is about 0.70 in this dataset. It cannot tell us whether
 either variable influences the other, or how these trend scores were produced.
 
-# Teaching close
+# Takeaway
 
-Close by reinforcing that a compelling plot, correlation, or p-value is a
-starting point for analysis. Causal claims require a research design that can
-rule out alternative explanations.
+Remember that a compelling plot, correlation, or p-value is a starting point for analysis. Causal claims require a research design that can rule out alternative explanations.
 
-Because these 50 rows are states rather than a random sample of people,
-statistical p-values are examples of test output, not proof of a general
-claim about all ice cream lovers. Trend scores are not sales or consumption.
+Because these 50 rows are states rather than a random sample of people, statistical p-values are examples of test output, not proof of a general claim about all ice cream lovers. Trend scores are not sales or consumption.
