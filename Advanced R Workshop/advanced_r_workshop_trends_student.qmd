@@ -21,7 +21,8 @@ Install these packages once if needed, then load them every time you start a new
 
 ```{r}
 # Run once in the R console if you need the packages:
-# install.packages(c("tidyverse", "broom"))
+# c() combines these package names into one character vector.
+install.packages(c("tidyverse", "broom"))
 
 library(tidyverse)
 library(broom)
@@ -70,6 +71,13 @@ census_df |>
 
 The `aes()` function chooses what each visual property represents. The `geom_` function chooses the kind of mark drawn on the graph.
 
+## Exploring color names
+
+R has many named colors you can use in plots. Run `colors()` to see the available names.
+
+```{r}
+colors()
+```
 ## Scatterplot: `geom_point()`
 
 Start with the plot from beginning R, then add a fitted line. Each point represents one state. Do colder states have higher ice cream trend scores?
@@ -78,7 +86,7 @@ Start with the plot from beginning R, then add a fitted line. Each point represe
 census_df |>
   ggplot(aes(x = avg_temp_f, y = `ice cream`)) +
   geom_point(color = "deepskyblue4", size = 3, alpha = 0.7) +
-  geom_smooth(method = "lm", se = FALSE, color = "black") +
+  geom_smooth(method = "lm", se = TRUE, color = "black") +
   labs(
     title = "Do colder states have higher ice cream trend scores?",
     subtitle = "A trend line describes association, not ice cream consumption.",
@@ -122,8 +130,8 @@ profile_counts <- census_df |>
   arrange(desc(number_of_states))
 
 profile_counts |>
-  ggplot(aes(x = reorder(personality_profile, number_of_states), y = number_of_states)) +
-  geom_bar(stat = "identity", fill = "steelblue") +
+  ggplot(aes(x = personality_profile, y = number_of_states)) +
+  geom_col(fill = "steelblue") +
   coord_flip() +
   labs(
     title = "How the dataset labels state personality profiles",
@@ -295,6 +303,7 @@ Try several different kinds of pairings before deciding whether any pattern is i
 
 ```{r}
 correlation_sampler <- data.frame(
+  # c() combines these pair labels into one character vector.
   pair = c(
     "Waffles and pancakes",
     "National parks and stargazing",
