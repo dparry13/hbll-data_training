@@ -78,6 +78,11 @@ R has many named colors you can use in plots. Run `colors()` to see the availabl
 ```{r}
 colors()
 ```
+
+## Exploring plot and theme options
+
+To see a list of all commonly available ggplot plotting options, select the packages tab from one of your panes (by default the bottom-right), find ggplot2, select it, and browse the functions that begin with geom. To browse available themes, scroll to the functions that begin with theme, and say complete themes in the description.
+
 ## Scatterplot: `geom_point()`
 
 Start with the plot from beginning R, then add a fitted line. Each point represents one state. Do colder states have higher ice cream trend scores?
