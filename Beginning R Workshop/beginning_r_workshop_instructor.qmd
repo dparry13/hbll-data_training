@@ -11,7 +11,7 @@ editor_options:
 
 ## Your first five minutes
 
-This is the instructor guide. Run one `{r}` code block at a time and discuss its result before moving on. If a block produces an error, read the message together. A `#` line is a note for humans; R does not run it. The practice blocks below contain complete solutions; let students try their blank blocks first.
+This is the instructor guide. Run one `{r}` code block at a time and discuss its result before moving on. If a block produces an error, read the message together. A `#` line is a note for humans; R does not run it. The challenge blocks below contain complete solutions; let students try their blank blocks first.
 
 **Live route (about one hour):** Try one calculator change, load the data, practice `select()` and `filter()`, sort the cold ice cream states, make one plot, and finish with the cold scoop challenge. The other examples are available for later practice.
 
@@ -35,8 +35,18 @@ road_trip_snack <- "waffles"
 
 # Try it: replace 6 and "waffles" with your own choices, then run again.
 my_favorite_number
-road_trip_snack
+road_trip_snack 
 ```
+
+## **2 Nice-to-Know Keyboard Shortcuts**
+
+[**1. Insert Assignment Operator (\`\<-\`)**]{.underline}
+Windows / Linux: **\`Alt\` + \`-\`**
+Mac: **\`Option\` + \`-\`**
+
+[**2. Run Selected Line / Code**]{.underline}
+Windows / Linux: \`**Ctrl\` + \`Enter**\`
+Mac: \`**Cmd\` + \`Return**\`
 
 R uses **functions** to manipulate and analyze data. Functions use parentheses:
 
@@ -52,7 +62,7 @@ sqrt(36)
 
 ```{r}
 # Run once in the R console only if tidyverse is not installed:
-# install.packages("tidyverse")
+install.packages("tidyverse")
 library(tidyverse)
 ```
 
@@ -74,17 +84,10 @@ census_df <- read_csv("https://hbll.s.gy/rbegin")
 
 A **data frame** is a table or spreadsheet. Each row is an observation, and each column is a variable. In this workshop, each row is a U.S. state, with census-style facts and trend scores for food, sports, animals, and hobbies.
 
-The **pipe operator** (`|>`) passes the result on its left to the function on
-its right. Read a chain from top to bottom as “start with this data, *then* do
-this step, *then* do the next step.” In the example below, R starts with
-`census_df`, keeps four columns with `select()`, then shows the first six rows
-with `head()`. Each step uses the result of the step before it.
+The **pipe operator** (`|>`) passes the result on its left to the function on its right. Read a chain from top to bottom as “start with this data, *then* do this step, *then* do the next step.” In the example below, R starts with `census_df`then shows the first six rows with `head()`. Each step uses the result of the step before it.
 
 ```{r}
-# Start with only four columns so the wide data table is readable.
-census_df |>
-  select(state, avg_temp_f, `ice cream`, has_major_zoo) |>
-  head(6)
+census_df |> head(6)
 ```
 
 # Census and Trends Data Frame Analysis
@@ -152,6 +155,26 @@ census_with_brunch <- census_df |>
 The states are grouped into personality profiles. Find the average temperature, average annual sunshine, average UFO sightings, and number of states in each profile.
 
 ```{r}
+# STEP 1: Look at the raw data (Ungrouped)
+census_df |> head(10)
+
+# STEP 2: Group the data by personality profile
+grouped_census <- census_df |> 
+  group_by(personality_profile)
+
+grouped_census |> head(10)
+
+# STEP 3: Summarize the grouped data into averages
+summary_census <- grouped_census |> 
+  summarise(
+    average_temperature_f = mean(avg_temp_f),
+    average_sunny_days = mean(annual_sunny_days),
+    average_ufo_sightings = mean(ufo_sightings_per_100k),
+    number_of_states = n()
+  )
+
+summary_census |> head(10)
+
 census_df |>
   group_by(personality_profile) |>
   summarise(
@@ -159,7 +182,6 @@ census_df |>
     average_sunny_days = mean(annual_sunny_days),
     average_ufo_sightings = mean(ufo_sightings_per_100k),
     number_of_states = n(),
-    .groups = "drop"
   )
 ```
 
@@ -242,8 +264,7 @@ census_df |>
 
 ## Practice Time
 
-**Instructor note:** Each code block below answers the prompt immediately above it.
-Pause before running a solution so students can work independently.
+**Instructor note:** Each code block below answers the prompt immediately above it. Pause before running a solution so students can work independently.
 
 **Cold scoop challenge:** Predict a state first! Your friend wants to visit a major zoo and find a state with a high ice cream trend score. Among states below 50°F that have a major zoo, which state ranks highest? What happens if you remove the zoo requirement? A trend score does not confirm what a zoo serves.
 
