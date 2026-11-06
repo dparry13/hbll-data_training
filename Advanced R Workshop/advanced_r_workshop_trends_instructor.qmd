@@ -1,5 +1,5 @@
 ---
-title: "Advanced R Workshop Instructor Guide: Ice Cream and State Trends"
+title: "Advanced R Workshop Student Workbook: Ice Cream and State Trends"
 author: "BYU Library"
 format: html
 editor: visual
@@ -9,11 +9,12 @@ editor: visual
 
 This student workbook uses the 50-state census-and-trends dataset. Each row is a state, and the columns include climate, parks, UFO sightings, food, hobbies, animals, and other trend scores. Our running question follows beginning R: **Do colder states have higher ice cream trend scores?**
 
-## Instructor notes
+## How to use this workbook
 
-The code boxes in the practice section contain one possible solution for each challenge. For a one-hour session, choose two challenges to work through with students; use the others for demonstration or reference. The optional examples are available for practice afterward.
+The worked examples have complete code to run during the workshop and keep for reference. For a one-hour session, follow the main examples with the instructor, then choose two practice challenges to try on your own. The optional reference examples are available for practice afterward. The examples demonstrate plot construction, faceting, and model output while reinforcing the distinction between association and causation.
 
 `ice cream` is a trend score, not a measure of ice cream sales or consumption. The main question is a teaching example, not evidence that weather changes what people eat.
+
 ## Setup
 
 Install these packages once if needed, then load them every time you start a new R session.
@@ -77,6 +78,11 @@ R has many named colors you can use in plots. Run `colors()` to see the availabl
 ```{r}
 colors()
 ```
+
+## Exploring plot and theme options
+
+To see a list of all commonly available ggplot plotting options, select the packages tab from one of your panes (by default the bottom-right), find ggplot2, select it, and browse the functions that begin with geom. To browse available themes, scroll to the functions that begin with theme, and say complete themes in the description.
+
 ## Scatterplot: `geom_point()`
 
 Start with the plot from beginning R, then add a fitted line. Each point represents one state. Do colder states have higher ice cream trend scores?
