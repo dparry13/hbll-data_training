@@ -125,9 +125,9 @@ temperature_ranked |>
   theme_minimal()
 ```
 
-## Bar graph: `geom_bar()`
+## Bar graph: `geom_col()`
 
-`geom_bar()` can draw bars from values you already calculated. First count the number of states in each personality profile, then use `stat = "identity"` to tell ggplot2 that the heights are already in `number_of_states`.
+`geom_col()` can draw bars from values you already calculated. First count the number of states in each personality profile, then use `stat = "identity"` to tell ggplot2 that the heights are already in `number_of_states`.
 
 ```{r}
 profile_counts <- census_df |>
@@ -461,7 +461,7 @@ The hints below describe each challenge, and the code boxes contain one possible
       dog_ownership_pct ~ waffle_house_status,
       data = census_df
     )
-    
+
     tidy(dog_waffle_test)
     ```
 
@@ -472,7 +472,7 @@ The hints below describe each challenge, and the code boxes contain one possible
       capybara ~ waffles + `dungeons and dragons`,
       data = census_df
     )
-    
+
     capybara_model |>
       augment(data = census_df) |>
       select(state, capybara, .fitted, .resid) |>
@@ -494,17 +494,17 @@ The hints below describe each challenge, and the code boxes contain one possible
         y = "Ice cream trend score"
       ) +
       theme_minimal()
-    
+
     ice_cream_predictions |>
       select(state, avg_temp_f, `ice cream`, .fitted, .resid) |>
       arrange(desc(.resid)) |>
       head(1)
-    
+
     top_ice_cream_state <- ice_cream_predictions |>
       arrange(desc(.resid)) |>
       slice(1) |>
       pull(state)
-    
+
     paste(
       top_ice_cream_state,
       "has a higher ice cream trend score than this model predicts."
@@ -515,7 +515,7 @@ The hints below describe each challenge, and the code boxes contain one possible
 
     ```{r}
     cor(census_df$ufo_sightings_per_100k, census_df$`sourdough baking`)
-    
+
     census_df |>
       ggplot(aes(x = `sourdough baking`, y = ufo_sightings_per_100k)) +
       geom_point(color = "darkorchid4", size = 3) +
@@ -526,7 +526,7 @@ The hints below describe each challenge, and the code boxes contain one possible
         y = "UFO sightings per 100,000 people"
       ) +
       theme_minimal()
-    
+
     # The correlation is about 0.70 in this dataset; it does not establish causation.
     # Example headline: Sourdough searches and UFO reports share a mysterious state-level pattern.
     ```
