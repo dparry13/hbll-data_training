@@ -125,9 +125,9 @@ temperature_ranked |>
   theme_minimal()
 ```
 
-## Bar graph: `geom_bar()`
+## Bar graph: `geom_col()`
 
-`geom_bar()` can draw bars from values you already calculated. First count the number of states in each personality profile, then use `stat = "identity"` to tell ggplot2 that the heights are already in `number_of_states`.
+`geom_col()` can draw bars from values you already calculated. First count the number of states in each personality profile, then use `stat = "identity"` to tell ggplot2 that the heights are already in `number_of_states`.
 
 ```{r}
 profile_counts <- census_df |>
