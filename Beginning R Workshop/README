@@ -1,3 +1,5 @@
 The link to load the dataset in RStudio is https://hbll.s.gy/rbegin
 
 To open the file automatically in RStudio, go to the console in the bottom left corner of the screen and type source("https://hbll.s.gy/brs")
+
+To continue to learn more about R and its use in data science, please refer to the document titled Learning_More_R
