@@ -127,7 +127,7 @@ temperature_ranked |>
 
 ## Bar graph: `geom_col()`
 
-`geom_col()` can draw bars from values you already calculated. First count the number of states in each personality profile, then use `stat = "identity"` to tell ggplot2 that the heights are already in `number_of_states`.
+`geom_col()` can draw bars from values you already calculated. First count the number of states in each personality profile. Then use `geom_col()` to plot the results.
 
 ```{r}
 profile_counts <- census_df |>
@@ -447,7 +447,7 @@ Choose two challenges to work through during the workshop. The worked examples a
 
 Choose any two numeric columns in the dataset that make you curious. Calculate their correlation, make a scatterplot, and then inspect the points for unusual states or outliers. Finish by writing one sentence about what the pattern does **not** prove and one possible third factor that could influence both variables.
 
-*Hint:* Look at column names with `glimpse(census_df)`. Choose two numeric columns, then revisit the correlation and scatterplot examples above.
+*Hint:* Look at column names with `glimpse(census_df)`, or look at the dataset using the environment tab. Choose two numeric columns, then revisit the correlation and scatterplot examples above.
 
 ```{r}
 
