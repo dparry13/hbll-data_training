@@ -391,6 +391,20 @@ nba_taco_test <- t.test(tacos ~ has_nba_team, data = census_df)
 tidy(nba_taco_test)
 ```
 
+::: {.callout-tip}
+## Save your work
+
+Save your `.qmd` file to keep your code. To save a results table as a CSV (which opens in Excel), first store it in a variable, then use `write_csv()`:
+
+```{r}
+my_results <- census_df |>
+  select(state, annual_sunny_days)
+write_csv(my_results, "my_results.csv")
+```
+
+`write_csv()` comes with `tidyverse`. The CSV is saved in your current working folder; run `getwd()` to see that folder. Replace the `select()` step with the steps for the table you want to keep.
+:::
+
 # Practice challenges
 
 Choose two challenges to work through during the workshop. The worked examples above are your reference; the hints below point you toward a starting place without giving away the code. Try the others after the workshop.

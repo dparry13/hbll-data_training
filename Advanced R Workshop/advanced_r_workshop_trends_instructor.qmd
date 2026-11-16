@@ -127,7 +127,7 @@ temperature_ranked |>
 
 ## Bar graph: `geom_col()`
 
-`geom_col()` can draw bars from values you already calculated. First count the number of states in each personality profile, then use `stat = "identity"` to tell ggplot2 that the heights are already in `number_of_states`.
+`geom_col()` can draw bars from values you already calculated. First count the number of states in each personality profile. Then use `geom_col()` to plot the results.
 
 ```{r}
 profile_counts <- census_df |>
@@ -391,6 +391,20 @@ nba_taco_test <- t.test(tacos ~ has_nba_team, data = census_df)
 tidy(nba_taco_test)
 ```
 
+::: {.callout-tip}
+## Save your work
+
+Save your `.qmd` file to keep your code. To save a results table as a CSV (which opens in Excel), first store it in a variable, then use `write_csv()`:
+
+```{r}
+my_results <- census_df |>
+  select(state, annual_sunny_days)
+write_csv(my_results, "my_results.csv")
+```
+
+`write_csv()` comes with `tidyverse`. The CSV is saved in your current working folder; run `getwd()` to see that folder. Replace the `select()` step with the steps for the table you want to keep.
+:::
+
 # Practice challenges
 
 The hints below describe each challenge, and the code boxes contain one possible solution. Use the examples to discuss the steps and adapt them with students.
@@ -535,7 +549,7 @@ The hints below describe each challenge, and the code boxes contain one possible
 
 Choose any two numeric columns in the dataset that make you curious. Calculate their correlation, make a scatterplot, and then inspect the points for unusual states or outliers. Finish by writing one sentence about what the pattern does **not** prove and one possible third factor that could influence both variables.
 
-*Hint:* Look at column names with `glimpse(census_df)`. Choose two numeric columns, then revisit the correlation and scatterplot examples above.
+*Hint:* Look at column names with `glimpse(census_df)`, or look at the dataset using the environment tab. Choose two numeric columns, then revisit the correlation and scatterplot examples above.
 
 ```{r}
 # Example solution: choose two numeric columns.
