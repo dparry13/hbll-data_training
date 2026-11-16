@@ -11,13 +11,13 @@ editor_options:
 
 ## Your first five minutes
 
-Click the run button beside one `{r}` code block at a time and look at its result before moving on. If a block produces an error, read the message together. A `#` line is a note for humans; R does not run it. In practice, use the hints and write your own code in the blank blocks.
+Click the run button beside one `{r}` code block at a time and look at its result before moving on. If a block produces an error, read the message together. In practice, use the hints and write your own code in the blank blocks.
 
 **Today's route (about one hour):** Try one calculator change, load the data, practice `select()` and `filter()`, sort the cold ice cream states, make one plot, and finish with the cold scoop challenge. The other examples are available for later practice.
 
 ## What is R?
 
-R is a programming language that can act like a calculator and can also perform more complex data-analysis tasks. For this workshop, we will focus on three general types: *numbers*, *characters*, and *variables*. Our running question is: **Do colder states have higher ice cream trend scores?**
+R is a programming language that can act like a calculator and can also perform more complex data-analysis tasks. For this workshop, we will focus on three general types: *numbers*, *characters*, and *variables*. A line beginning with `#`  is a comment instead of a line of code; R does not run it. Our running question is: **Do colder states have higher ice cream trend scores?**
 
 ```{r}
 # Numbers
@@ -205,7 +205,7 @@ census_df |>
 
 **Live:** `desc()` means descending, or highest first. Before running this block, predict one sunny state that might appear near the top.
 
-Use `arrange()` to put rows in order. Here are the ten sunniest states, from most to least sunny:
+Use `arrange()` to put rows in order. By default, `arrange()` sorts in ascending order (lowest to highest) unless you use `desc()` to request descending order (highest to lowest). Here are the ten sunniest states, from most to least sunny:
 
 ```{r}
 census_df |>
@@ -244,6 +244,8 @@ census_df |>
     .groups = "drop"
   )
 ```
+
+The `.groups = "drop"` argument tells `summarise()` to remove all grouping after calculating the summaries. It keeps the `temperature_group` column and both summary rows, but returns an ungrouped data frame so later calculations work on the whole result instead of separately within groups. This line is optional here: with just one grouping column and one summary row per group, `summarise()` would remove the grouping by default. We include it to make that behavior explicit and ensure no grouping remains if we later add more grouping columns.
 
 A simple scatterplot helps us see whether the pattern holds across states. Advanced R will return to this plot to explore facets and a model.
 
