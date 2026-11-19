@@ -1,294 +1,125 @@
 OpenRefine Challenges Guide & Solutions
-Faceting missions
+
+Use these files
+
+Faceting challenges: census_and_trends_data_OpenRefine.csv
+Clustering challenges: openrefine_clustering_practice_space_df.csv
+
+Import each CSV as a separate OpenRefine project. Keep the original column names and values while investigating. These exercises are about finding and interpreting inconsistent data; do not replace values unless the challenge explicitly asks you to merge text clusters.
+
+FACETING PRACTICE
 
 1. Alien Impostors
 
-Goal: Find the numeric census column containing the greatest variety of text values that do not belong.
+Challenge
+Find the numeric column containing the most text values that do not belong. How many errors can you find in one column?
 
-How to investigate
+Steps
+1. Open the census project and inspect numeric columns, especially the population and demographic fields.
+2. Use a numeric facet or type-based facet to find cells OpenRefine does not recognize as numbers.
+3. Add a text facet to the leading candidate. Review the exact values and their counts.
+4. Distinguish malformed text from legitimate numeric formatting, such as a population with thousands separators.
 
-Start with the census and demographic columns near the beginning of the dataset.
+Answer key
+The intended column is total_pop. It has eight suspicious text entries:
 
-On a suspected numeric column, select:
+- Alaska: about 733406
+- Delaware: about 1031890
+- Massachusetts: —
+- New York: 19571216 people
+- North Dakota: 783926%
+- Ohio: ~11785935
+- Washington: approx. 7812880
+- blank state: unknown
 
-Column menu → Facet → Numeric facet
-
-Select the non-numeric portion of the facet.
-
-Add a text facet on the same column to see the exact suspicious values.
-
-Count distinct disguises, not merely affected rows.
-
-Repeat with other numeric census columns and compare.
-
-A useful alternative is:
-
-Column menu → Facet → Custom text facet
-
-Enter:
-
-type(value)
-
-This separates numbers from strings and other data types.
-
-Expected finding
-
-The intended answer is total_pop, with five distinct disguises:
-
-—
-
-38,965,193
-
-783926%
-
-about 1031890
-
-unknown
-
-The comma-formatted population contains a recoverable number, but it is stored differently. The other values require cleaning or review.
-
-annual_sunny_days also has five affected cells because one corrupted California record was duplicated, but it has only three distinct bad forms. For a unique answer, phrase the challenge as “the greatest variety of text disguises.”
+These are eight different suspicious forms. A comma-formatted population such as 38,965,193 is still a numeric value that can be parsed; check how the facet interprets it before counting it as an error.
 
 2. Escape-Velocity Outliers
 
-Goal: Find values outside the expected 0–100 range in the sports columns and identify the most extreme one.
+Challenge
+Through all of the sports columns, find values greater than the expected 0–100 range. Which column has the biggest problem?
 
-How to investigate
+Steps
+1. In the census project, inspect the sports columns from basketball through water polo.
+2. Create a numeric facet for a sports column and inspect its maximum, or use a text facet to find unusually large numeric-looking entries.
+3. Repeat across the sports columns. Record the column, state, and value for each value above 100.
+4. Compare both the largest value and the number of outliers in each column.
 
-Examine the sports block from basketball through water polo.
+Answer key
+There are 19 numeric values above 100 across 17 sports columns. The largest is badminton = 8920 for New Hampshire. Baseball and bowling have the most above-range values, tied at two each:
 
-Convert a target column to numbers if necessary.
+- baseball: Louisiana 231; South Dakota 7519
+- bowling: Kansas 272; Alabma 921
 
-Create a numeric facet.
+The other above-range values are basketball 7267 (Maryland), hockey 2201 (Mississippi), pickleball 7070 (Indiana), snowboarding 3698 (Arizona), nba 8548 (Minnesota), nhl 5559 (Iowa), march madness 8551 (Arkansas), pga tour 1573 (Connecticut), nascar 2065 (Pennsylvania), volleyball 4665 (Mississippi), gymnastics 7055 (Georgia), lacrosse 4100 (Illinois), archery 2304 (New Mexico), skateboarding 4447 (blank state), and badminton 8920 (New Hampshire).
 
-Inspect the minimum and maximum displayed in the histogram.
+If “biggest problem” means the most extreme single value, the answer is badminton. If it means the highest count of out-of-range cells, baseball and bowling tie. Values outside 0–100 should be flagged for review; do not infer their intended replacements from this dataset alone.
 
-Drag the facet handles to isolate values below 0 or above 100.
+3. The Data Wormhole
 
-Click the matching records to identify their state.
+Challenge
+Go through a column that uses true/false values. Count how many variations of true there are and how many variations of false.
 
-Compare the largest outliers across the sports columns.
+Steps
+1. In the census project, choose a Boolean-style column such as has_waffle_house.
+2. Create a text facet and sort by name so capitalization, whitespace, and alternate representations appear separately.
+3. Count the distinct forms that appear to mean true and false. Repeat for the other Boolean-style columns and compare.
+4. Treat the semantic meaning of values such as YES and 0 as a data rule to confirm, not something OpenRefine can decide automatically.
 
-Expected finding
+Answer key
+In has_waffle_house, the three apparent true forms are TRUE, True, and YES. The six apparent false forms are FALSE, false, False, False with trailing whitespace, NO, and 0. Exact spelling and capitalization matter in the text facet.
 
-The most extreme problem is:
+Across the four Boolean-style columns (has_nba_team, has_major_zoo, is_coastal, and has_waffle_house), the same general forms occur, with small differences by column. NO and 0 appear as false-like values; YES appears as a true-like value. Confirm those mappings before transforming the data.
 
-Column: bowling
+CLUSTERING CHALLENGES
 
-Record: Arkansas
+Use the space practice dataset for all three challenges. To inspect a column, use its dropdown menu and choose Edit cells → Cluster and edit. Review proposed clusters before merging. The exact suggestions can vary with method and settings.
 
-Suspicious value: 921
+1. The Planet of Many Names
 
-Other major outliers include:
+Challenge
+Find the planet with the most spelling and formatting variations. Merge its identities into one official name.
 
-volleyball: Nevada, 761
+Steps
+1. Create a text facet on Planet and inspect the distinct values.
+2. Open Cluster and edit. Start with Key collision → Fingerprint to find case and spacing variations.
+3. Review a cluster, choose the official spelling shown below, and merge only the records that clearly represent the same planet.
+4. Use a small-radius nearest-neighbor method to explore additional close spellings, reviewing every suggestion.
 
-baseball: Louisiana, 231
+Answer key
+The data has 86 distinct Planet strings representing 15 apparent planet names. There is not one unique winner: 11 planet families tie with six distinct forms each (Asgard, Coruscant, Earth, Gallifrey, Mandalore, Naboo, Pandora, Qo'noS, Tatooine, Vulcan, and Xandar). Ego, Hoth, Krypton, and Romulus each have five forms. For a demonstration, merge the six Vulcan forms to the official name Vulcan.
 
-Several sports columns contain -1
+The differences are capitalization and, in some cases, trailing whitespace. This dataset does not contain a unique planet with more spelling errors than all the others; make that tie clear to learners.
 
-What learners can conclude
+2. The Space Food Fiasco
 
-They can conclude that 921 is invalid because it violates the stated 0–100 rule.
+Challenge
+On the Main Food Dish column, use different clustering methods and see which one finds more spelling mistakes.
 
-They cannot conclude that it should be 49. The correct replacement requires the clean source, documentation, or another trusted reference. Without that evidence, they should flag or star the row for investigation rather than invent a value.
+Steps
+1. Open Cluster and edit on Main Food Dish.
+2. Run Key collision → Fingerprint and note which capitalization and spacing variants it groups.
+3. Compare with a nearest-neighbor method, such as N-gram Fingerprint or Levenshtein. Try a conservative setting first.
+4. Review the suggested clusters and count plausible spelling mistakes separately from simple case or whitespace differences.
 
-The instructor key says 49 because the original workshop source contains 49 before it was deliberately changed to 921.
+Answer key
+Most differences are capitalization and trailing spaces. A likely spelling issue is Ail Soup / ail soup in comparison with Ale Soup / ale soup. A nearest-neighbor method may surface Ail Soup as a candidate for Ale Soup, while Fingerprint keeps the different spellings apart. Treat this as a review candidate; confirm the intended dish before merging. There are 62 distinct raw strings in the column, including these variants, and the number of suggestions depends on the clustering method and settings.
 
-3. Data Wormhole
+3. Cluster Constellation
 
-Goal: Find the record whose values slipped into neighboring columns.
+Challenge
+Using the Favorite Activity column, see how many errors you can find in variations of the planets’ favorite things.
 
-How to investigate
+Steps
+1. Open Cluster and edit on Favorite Activity.
+2. Start with Fingerprint to find case, spacing, and punctuation variants.
+3. Compare with N-gram Fingerprint or Levenshtein to find looser matches.
+4. Inspect each cluster, record the distinct forms, and merge only forms that clearly represent the same activity.
 
-Create numeric or text facets on these pairs:
+Answer key
+Favorite Activity contains 68 distinct raw strings and 15 apparent activity labels. The differences are mostly capitalization, trailing spaces, or hyphenation. Eight activities have five raw forms each: Armor Crafting, Bat'leth Training, Ice Sculpting, Logic Debates, Pod Racing, Star Racing, Time Travel, and Tree Climbing. The other seven labels have four forms each: Boating, Espionage, Feasting, Flying, Gaming, Meditation, and Politics.
 
-avg_temp_f and annual_sunny_days
+The dataset supplies formatting variants rather than a single definitive list of misspellings. Clustering can suggest which forms to review, but learners should not count a punctuation or case difference as a proven content error. Use consistent official spellings when merging.
 
-median_income and median_age
-
-bachelors_deg_pct and poverty_rate_pct
-
-Look for:
-
-A value that is unreasonable for its current column.
-
-The same value appearing naturally in its neighboring column.
-
-Two unusual values occurring in the same record.
-
-Mirrored values that strongly suggest a swap.
-
-Expected finding
-
-The affected record is Alabama.
-
-Column
-
-Wrong value
-
-Probable correct value
-
-avg_temp_f
-
-200
-
-62.8
-
-annual_sunny_days
-
-62.8
-
-200
-
-median_income
-
-38.5
-
-69,021
-
-median_age
-
-69,021
-
-38.5
-
-bachelors_deg_pct
-
-11.5
-
-34.3
-
-poverty_rate_pct
-
-34.3
-
-11.5
-
-Temperature, sunny days, income, and age are obvious from their units. The two percentages are subtler, but they mirror the normal values in the opposite columns.
-
-The pattern strongly supports a swap, but an authoritative source should still confirm the repair.
-
-Clustering missions
-
-4. Planet of Many Names
-
-Goal: Find the state name with the most apparent variants.
-
-How to investigate
-
-On state, create a text facet.
-
-Sort the facet by name and inspect similar entries.
-
-Click Cluster in the facet.
-
-Begin with Key collision → Fingerprint.
-
-Next try Nearest neighbor → Levenshtein with a small radius.
-
-Review every proposed group before merging.
-
-Expected finding
-
-The apparent Alabama family contains:
-
-Alabama
-
-alabama
-
-ALABAMA  with trailing whitespace
-
- Alabama with leading whitespace
-
-Alabma
-
-Ala.
-
-Fingerprint should catch case, spacing, and punctuation differences. Levenshtein can identify Alabma. The abbreviation Ala. may need human judgment.
-
-Important instructor note
-
-At the string-cleaning level, these look like Alabama variants. However, clustering cannot determine whether the complete records genuinely represent Alabama. In this workshop file, several original state names were overwritten. Recovering those lost names requires the clean source.
-
-5. Broken Binary Beacon
-
-Goal: Discover how many ways the four yes/no columns express a false value.
-
-How to investigate
-
-Create a text facet on each of these columns:
-
-has_nba_team
-
-has_major_zoo
-
-is_coastal
-
-has_waffle_house
-
-For each facet:
-
-Sort by name.
-
-Count the distinct forms.
-
-Open clustering and run Fingerprint.
-
-Review which forms cluster automatically.
-
-Decide which values require a manual semantic mapping.
-
-Expected finding
-
-The six forms are:
-
-TRUE
-
-FALSE
-
-false
-
-False  with trailing whitespace
-
-NO
-
-0
-
-All four columns contain the same six distinct forms.
-
-Fingerprint can combine FALSE, false, and False . It cannot know that NO and 0 mean the same thing as FALSE; that decision requires a known data rule.
-
-has_waffle_house contains the most nonstandard cells because the corrupted California record was duplicated.
-
-6. Cluster Constellation
-
-Goal: Compare clustering methods and observe how the suggestions change.
-
-How to investigate
-
-Use the state column without immediately approving any merges.
-
-Run Fingerprint and inspect the suggestions.
-
-Switch to N-gram Fingerprint and compare the results.
-
-Try Levenshtein with a small radius.
-
-Increase the radius gradually and watch for unrelated values appearing together.
-
-Close the window without merging if the purpose is only comparison.
-
-OpenRefine recommends moving from stricter methods to looser ones. Fingerprint is a good starting point because it normalizes case, whitespace, and punctuation with relatively few false matches. N-gram and Levenshtein can find more typographical differences but require closer review. See the official clustering-method guide.
-
-Expected observations
-
-Fingerprint: Safest for case, whitespace, and punctuation.
-
-N-gram: May catch more spelling differences, but loose settings can create questionable groups.
-
-Levenshtein: A small radius should catch Alabma.
-
-Human review: Still needed for abbreviations such as Ala. and for deciding whether similar labels truly represent the same entity.
-
-There is no single winning method. The intended lesson is that greater recall usually brings a greater risk of false matches.
+Instructor note
+Clustering algorithms produce candidate groups, not verified corrections. Keep the original project or a copy before merging, and use an authoritative source when the intended value is uncertain.
